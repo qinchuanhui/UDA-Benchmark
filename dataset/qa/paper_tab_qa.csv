@@ -1,0 +1,638 @@
+doc_name|q_uid|question|answer_1|answer_2|answer_3
+1912.01214|5eda469a8a77f028d0c5f1acd296111085614537|what language pairs are explored?|De-En, En-Fr, Fr-En, En-Es, Ro-En, En-De, Ar-En, En-Ru|French-English-Spanish (Fr-En-Es), German-English-French (De-En-Fr) and Romanian-English-German (Ro-En-De), Arabic (Ar), Spanish (Es), and Russian (Ru), and mutual translation between themselves constitutes six zero-shot translation| 
+1801.05147|ef4dba073d24042f24886580ae77add5326f2130|What accuracy does the proposed system achieve?|F1 scores of 85.99 on the DL-PS data,  75.15 on the EC-MT data and 71.53 on the EC-UQ data |F1 of 85.99 on the DL-PS dataset (dialog domain); 75.15 on EC-MT and 71.53 on EC-UQ (e-commerce domain)| 
+1704.06194|9ee07edc371e014df686ced4fb0c3a7b9ce3d5dc|On which benchmarks they achieve the state of the art?|SimpleQuestions, WebQSP|WebQSP, SimpleQuestions| 
+1909.00512|891c2001d6baaaf0da4e65b647402acac621a7d2|How do they calculate a static embedding for each word?|They use the first principal component of a word's contextualized representation in a given layer as its static embedding.| by taking the first principal component (PC) of its contextualized representations in a given layer| 
+2003.03106|66c96c297c2cffdf5013bab5e95b59101cb38655|What is the performance of BERT on the task?|"F1 scores are:
+HUBES-PHI: Detection(0.965), Classification relaxed (0.95), Classification strict (0.937)
+Medoccan: Detection(0.972), Classification (0.967)"|BERT remains only 0.3 F1-score points behind, and would have achieved the second position among all the MEDDOCAN shared task competitors. Taking into account that only 3% of the gold labels remain incorrectly annotated,  Table | 
+1909.11687|efe9bad55107a6be7704ed97ecce948a8ca7b1d2|What state-of-the-art compression techniques were used in the comparison?|baseline without knowledge distillation (termed NoKD), Patient Knowledge Distillation (PKD)|NoKD, PKD, BERTBASE teacher model| 
+1804.05918|f17ca24b135f9fe6bb25dc5084b13e1637ec7744|What discourse relations does it work best/worst for?|explicit discourse relations|Best: Expansion (Exp). Worst: Comparison (Comp).| 
+2002.01664|75df70ce7aa714ec4c6456d0c51f82a16227f2cb|Which 7 Indian languages do they experiment with?|Hindi, English, Kannada, Telugu, Assamese, Bengali and Malayalam|Kannada, Hindi, Telugu, Malayalam, Bengali,  English and Assamese (in table, missing in text)| 
+1809.00540|a99fdd34422f4231442c220c97eafc26c76508dd|Do they use graphical models?|No|No| 
+1809.00540|d604f5fb114169f75f9a38fab18c1e866c5ac28b|What metric is used for evaluation?|F1, precision, recall, accuracy|Precision, recall, F1, accuracy| 
+2004.03354|1d3e914d0890fc09311a70de0b20974bf7f0c9fe|Which eight NER tasks did they evaluate on?|BC5CDR-disease, NCBI-disease, BC5CDR-chem, BC4CHEMD, BC2GM, JNLPBA, LINNAEUS, Species-800|BC5CDR-disease, NCBI-disease, BC5CDR-chem, BC4CHEMD, BC2GM, JNLPBA, LINNAEUS, Species-800| 
+1611.04798|897ba53ef44f658c128125edd26abf605060fb13|Do they test their framework performance on commonly used language pairs, such as English-to-German?|Yes|Yes| 
+1809.01541|c32adef59efcb9d1a5b10e1d7c999a825c9e6d9a|What languages are evaluated?|German, English, Spanish, Finnish, French, Russian,  Swedish.| | 
+1809.01541|32a3c248b928d4066ce00bbb0053534ee62596e7|What is MSD prediction?|The task of predicting MSD tags: V, PST, V.PCTP, PASS.|morphosyntactic descriptions (MSD)| 
+1809.09194|d3dbb5c22ef204d85707d2d24284cc77fa816b6c|What other models do they compare to?|SAN Baseline, BNA, DocQA, R.M-Reader, R.M-Reader+Verifier and DocQA+ELMo|BNA, DocQA, R.M-Reader, R.M-Reader + Verifier, DocQA + ELMo, R.M-Reader+Verifier+ELMo| 
+1802.06024|286078813136943dfafb5155ee15d2429e7601d9|How much better than the baseline is LiLi?|"In case of Freebase knowledge base, LiLi model had better F1 score than the single model by 0.20 , 0.01, 0.159 for kwn, unk, and all test Rel type.  The values for WordNet are 0.25, 0.1, 0.2. 
+"| | 
+1809.00530|6aa2a1e2e3666f2b2a1f282d4cbdd1ca325eb9de|How many labels do the datasets have?|719313|Book, Electronics, Beauty and Music each have 6000, IMDB 84919, Yelp 231163, Cell Phone 194792 and Baby 160792 labeled data.| 
+1809.00530|9176d2ba1c638cdec334971c4c7f1bb959495a8e|What are the source and target domains?|Book, electronics, beauty, music, IMDB, Yelp, cell phone, baby, DVDs, kitchen|we use set 1 of the source domain as the only source with sentiment label information during training, and we evaluate the trained model on set 1 of the target domain, Book (BK), Electronics (E), Beauty (BT), and Music (M)| 
+1912.08960|b1bc9ae9d40e7065343c12f860a461c7c730a612|Which datasets are used?|Existential (OneShape, MultiShapes), Spacial (TwoShapes, Multishapes), Quantification (Count, Ratio) datasets are generated from ShapeWorldICE|ShapeWorldICE datasets: OneShape, MultiShapes, TwoShapes, MultiShapes, Count, and Ratio| 
+2002.11910|9da1e124d28b488b0d94998d32aa2fa8a5ebec51|What are previous state of the art results?|"Overall F1 score:
+- He and Sun (2017) 58.23
+- Peng and Dredze (2017) 58.99
+- Xu et al. (2018) 59.11"|For Named entity the maximum precision was 66.67%, and the average 62.58%, same values for Recall was 55.97% and 50.33%, and for F1 57.14% and 55.64%. Where for Nominal Mention had maximum recall of 74.48% and average of 73.67%, Recall had values of 54.55% and 53.7%,  and F1 had values of  62.97% and 62.12%. Finally the Overall F1 score had maximum value of 59.11% and average of 58.77%| 
+1909.09587|37be0d479480211291e068d0d3823ad0c13321d3|What is the model performance on target language reading comprehension?|Table TABREF6, Table TABREF8|when testing on English, the F1 score of the model training on Chinese (Zh) is 53.8,  F1 score is only 44.1 for the model training on Zh-En| 
+1909.09587|a3d9b101765048f4b61cbd3eaa2439582ebb5c77|What source-target language pairs were used in this work? |En-Fr, En-Zh, En-Jp, En-Kr, Zh-En, Zh-Fr, Zh-Jp, Zh-Kr to English, Chinese or Korean|English , Chinese|English, Chinese, Korean, we translated the English and Chinese datasets into more languages, with Google Translate
+1809.02286|0ad4359e3e7e5e5f261c2668fe84c12bc762b3b8|Which baselines did they compare against?|Various tree structured neural networks including variants of Tree-LSTM, Tree-based CNN, RNTN, and non-tree models including variants of LSTMs, CNNs, residual, and self-attention based networks|"Sentence classification baselines: RNTN (Socher et al. 2013), AdaMC-RNTN (Dong et al. 2014), TE-RNTN (Qian et al. 2015), TBCNN (Mou et al. 2015), Tree-LSTM (Tai, Socher, and Manning 2015), AdaHT-LSTM-CM (Liu, Qiu, and Huang 2017), DC-TreeLSTM (Liu, Qiu, and Huang 2017), TE-LSTM (Huang, Qian, and Zhu 2017), BiConTree (Teng and Zhang 2017), Gumbel Tree-LSTM (Choi, Yoo, and Lee 2018), TreeNet (Cheng et al. 2018), CNN (Kim 2014), AdaSent (Zhao, Lu, and Poupart 2015), LSTM-CNN (Zhou et al. 2016), byte-mLSTM (Radford, Jozefowicz, and Sutskever 2017), BCN + Char + CoVe (McCann et al. 2017), BCN + Char + ELMo (Peters et al. 2018). 
+Stanford Natural Language Inference baselines: Latent Syntax Tree-LSTM (Yogatama et al. 2017), Tree-based CNN (Mou et al. 2016), Gumbel Tree-LSTM (Choi, Yoo, and Lee 2018), NSE (Munkhdalai and Yu 2017), Reinforced Self- Attention Network (Shen et al. 2018), Residual stacked encoders: (Nie and Bansal 2017), BiLSTM with generalized pooling (Chen, Ling, and Zhu 2018)."| 
+1809.01202|4cbe5a36b492b99f9f9fea8081fe4ba10a7a0e94|What baselines did they consider?|state-of-the-art PDTB taggers|Linear SVM, RBF SVM, and Random Forest| 
+1906.01081|ffa7f91d6406da11ddf415ef094aaf28f3c3872d|By how much more does PARENT correlate with human judgements in comparison to other text generation metrics?|Best proposed metric has average correlation with human judgement of 0.913 and 0.846 compared to best compared metrics result of 0.758 and 0.829 on WikiBio and WebNLG challenge.|Their average correlation tops the best other model by 0.155 on WikiBio.| 
+1812.10479|b634ff1607ce5756655e61b9a6f18bc736f84c83|Which stock market sector achieved the best performance?|Energy with accuracy of 0.538|Energy| 
+1909.08089|de5b6c25e35b3a6c5e40e350fc5e52c160b33490|How much does their model outperform existing models?|"Best proposed model result vs best previous result:
+Arxiv dataset: Rouge 1 (43.62 vs 42.81), Rouge L (29.30 vs 31.80), Meteor (21.78 vs 21.35)
+Pubmed dataset: Rouge 1 (44.85 vs 44.29), Rouge L (31.48 vs 35.21), Meteor (20.83 vs 20.56)"|"On arXiv dataset, the proposed model outperforms baselie model by (ROUGE-1,2,L)  0.67 0.72 0.77 respectively and by Meteor 0.31.
+"| 
+1609.00559|8b3d3953454c88bde88181897a7a2c0c8dd87e23|What embedding techniques are explored in the paper?|Skip–gram, CBOW|integrated vector-res, vector-faith, Skip–gram, CBOW| 
+1904.10503|5a65ad10ff954d0f27bb3ccd9027e3d8f7f6bb76|Which other approaches do they compare their model with?|Akbik et al. (2018), Link et al. (2012)|They compare to Akbik et al. (2018) and Link et al. (2012).| 
+1912.01772|f9bf6bef946012dd42835bf0c547c0de9c1d229f|How is non-standard pronunciation identified?|Original transcription was labeled with additional labels in [] brackets with nonstandard pronunciation.| | 
+1909.04002|4d28c99750095763c81bcd5544491a0ba51d9070|What kind of celebrities do they obtain tweets from?|"Amitabh Bachchan, Ariana Grande, Barack Obama, Bill Gates, Donald Trump,
+Ellen DeGeneres, J K Rowling, Jimmy Fallon, Justin Bieber, Kevin Durant, Kim Kardashian, Lady Gaga, LeBron James,Narendra Modi, Oprah Winfrey"|Celebrities from varioius domains - Acting, Music, Politics, Business, TV, Author, Sports, Modeling. | 
+1712.00991|443d2448136364235389039cbead07e80922ec5c|What summarization algorithms did the authors experiment with?|LSA, TextRank, LexRank and ILP-based summary.|LSA, TextRank, LexRank| 
+1712.00991|fb3d30d59ed49e87f63d3735b876d45c4c6b8939|What evaluation metrics are looked at for classification tasks?|Precision, Recall, F-measure, accuracy|Precision, Recall and F-measure| 
+1712.00991|197b276d0610ebfacd57ab46b0b29f3033c96a40|What methods were used for sentence classification?|Logistic Regression, Multinomial Naive Bayes, Random Forest, AdaBoost, Linear SVM, SVM with ADWSK and Pattern-based|Logistic Regression, Multinomial Naive Bayes, Random Forest, AdaBoost, Linear SVM, SVM with ADWSK, Pattern-based approach| 
+2003.04642|9ecde59ffab3c57ec54591c3c7826a9188b2b270|What modern MRC gold standards are analyzed?|fit our problem definition and were published in the years 2016 to 2019, have at least $(2019 - publication\ year) \times 20$ citations|MSMARCO,  HOTPOTQA, RECORD,  MULTIRC, NEWSQA, and DROP.| 
+1904.07904|38f58f13c7f23442d5952c8caf126073a477bac0|What was the score of the proposed model?|Best results authors obtain is EM 51.10 and F1 63.11|EM Score of 51.10| 
+2003.11645|27275fe9f6a9004639f9ac33c3a5767fea388a98|What hyperparameters are explored?|Dimension size, window size, architecture, algorithm, epochs, hidden dimension size, learning rate, loss function, optimizer algorithm.|Hyperparameters explored were: dimension size, window size, architecture, algorithm and epochs.| 
+2003.11645|c2d1387e08cf25cb6b1f482178cca58030e85b70|Do they test both skipgram and c-bow?|Yes|Yes| 
+1608.06757|c2b8ee872b99f698b3d2082d57f9408a91e1b4c1|what is the state of the art?|Babelfy, DBpedia Spotlight, Entityclassifier.eu, FOX, LingPipe MUC-7, NERD-ML, Stanford NER, TagMe 2| | 
+1806.04330|8bf7f1f93d0a2816234d36395ab40c481be9a0e0|Do the authors also analyze transformer-based architectures?|No|No| 
+1904.03288|2ddb51b03163d309434ee403fef42d6b9aecc458|what were the baselines?|"LF-MMI Attention
+Seq2Seq 
+RNN-T 
+Char E2E LF-MMI 
+Phone E2E LF-MMI 
+CTC + Gram-CTC"| | 
+1904.03288|e587559f5ab6e42f7d981372ee34aebdc92b646e|what competitive results did they obtain?|"In case of read speech datasets,  their best model got the highest nov93 score of 16.1 and the highest nov92 score of 13.3.
+In case of Conversational Speech, their best model got the highest SWB of 8.3 and the highest CHM of 19.3. "|"On WSJ datasets author's best approach achieves 9.3 and 6.9 WER compared to best results of 7.5 and 4.1 on nov93 and nov92 subsets.
+On Hub5'00 datasets author's best approach achieves WER of 7.8 and 16.2 compared to best result of 7.3 and 14.2 on Switchboard (SWB) and Callhome (CHM) subsets."| 
+1909.13714|f68508adef6f4bcdc0cc0a3ce9afc9a2b6333cc5|By how much is performance improved with multimodality?|by 2.3-6.8 points in f1 score for intent recognition and 0.8-3.5 for slot filling|F1 score increased from 0.89 to 0.92| 
+1909.03405|bdc91d1283a82226aeeb7a2f79dbbc57d3e84a1a|How much is performance improved on NLI?| improvement on the RTE dataset is significant, i.e., 4% absolute gain over the BERTBase|The average score improved by 1.4 points over the previous best result.| 
+1907.03060|761de1610e934189850e8fda707dc5239dd58092|what was the baseline?|pivot-based translation relying on a helping language BIBREF10, nduction of phrase tables from monolingual data BIBREF14 , attentional RNN-based model (RNMT) BIBREF2, Transformer model BIBREF18, bi-directional model BIBREF11, multi-to-multi (M2M) model BIBREF8, back-translation BIBREF17|M2M Transformer| 
+1911.10049|603fee7314fa65261812157ddfc2c544277fcf90|How larger are the training sets of these versions of ELMo compared to the previous ones?|By 14 times.|up to 1.95 times larger| 
+1911.10049|09a1173e971e0fcdbf2fbecb1b077158ab08f497|What is the improvement in performance for Estonian in the NER task?|5 percent points.|0.05 F1| 
+1812.06864|70e9210fe64f8d71334e5107732d764332a81cb1|what is the state of the art on WSJ?|CNN-DNN-BLSTM-HMM|HMM-based system| 
+1811.12254|57f23dfc264feb62f45d9a9e24c60bd73d7fe563|what is the size of the augmented dataset?|609| | 
+1908.05828|d51dc36fbf6518226b8e45d4c817e07e8f642003|How many sentences does the dataset contain?|3606|6946| 
+1908.05828|cb77d6a74065cb05318faf57e7ceca05e126a80d|What is the baseline?|CNN modelBIBREF0, Stanford CRF modelBIBREF21|Bam et al. SVM, Ma and Hovy w/glove, Lample et al. w/fastText, Lample et al. w/word2vec| 
+1908.05828|a1b3e2107302c5a993baafbe177684ae88d6f505|What is the size of the dataset?|Dataset contains 3606 total sentences and 79087 total entities.|ILPRL contains 548 sentences, OurNepali contains 3606 sentences| 
+1908.05828|1462eb312944926469e7cee067dfc7f1267a2a8c|How many different types of entities exist in the dataset?|OurNepali contains 3 different types of entities, ILPRL contains 4 different types of entities|three| 
+1908.05828|f59f1f5b528a2eec5cfb1e49c87699e0c536cc45|How big is the new Nepali NER dataset?|3606 sentences|Dataset contains 3606 total sentences and 79087 total entities.| 
+1908.05828|9bd080bb2a089410fd7ace82e91711136116af6c|What is the performance improvement of the grapheme-level representation model over the character-level model?|On OurNepali test dataset Grapheme-level representation model achieves average 0.16% improvement, on ILPRL test dataset it achieves maximum 1.62% improvement|BiLSTM+CNN(grapheme-level) which turns out to be performing on par with BiLSTM+CNN(character-level) under the same configuration| 
+2002.02070|d53299fac8c94bd0179968eb868506124af407d1|What is the performance of classifiers?|Table TABREF10,  The KNN classifier seem to perform the best across all four metrics. This is probably due to the multi-class nature of the data set,  While these classifiers did not perform particularly well, they provide a good starting point for future work on this subject|Using F1 Micro measure, the KNN classifier perform 0.6762, the RF 0.6687, SVM 0.6712 and MLP 0.6778.| 
+2002.02070|29f2954098f055fb19d9502572f085862d75bf61|What classifiers have been trained?|"KNN
+RF
+SVM
+MLP"| K Nearest Neighbors (KNN), Random Forest (RF), Support Vector Machine (SVM), Multi-layer Perceptron (MLP)| 
+1908.10084|e2db361ae9ad9dbaa9a85736c5593eb3a471983d|What other sentence embeddings methods are evaluated?|GloVe, BERT, Universal Sentence Encoder, TF-IDF, InferSent|Avg. GloVe embeddings, Avg. fast-text embeddings, Avg. BERT embeddings, BERT CLS-vector, InferSent - GloVe and Universal Sentence Encoder.| 
+1806.04511|e79a5b6b6680bd2f63e9f4adbaae1d7795d81e38|which non-english language had the best performance?|Russian|Russsian| 
+1910.06592|3e1829e96c968cbd8ad8e9ce850e3a92a76b26e4|How big is the dataset used in this work?|Total dataset size: 171 account (522967 tweets)|212 accounts| 
+1902.09666|74fb77a624ea9f1821f58935a52cca3086bb0981|What is the size of the new dataset?|14,100 tweets|Dataset contains total of 14100 annotations.| 
+1902.09666|1b72aa2ec3ce02131e60626639f0cf2056ec23ca|How long is the dataset for each step of hierarchy?|"Level A: 14100 Tweets
+Level B: 4640 Tweets
+Level C: 4089 Tweets"| | 
+1604.00400|bf52c01bf82612d0c7bbf2e6a5bb2570c322936f|What different correlations result when using different variants of ROUGE scores?|we observe that many variants of Rouge scores do not have high correlations with human pyramid scores|Using Pearson corelation measure,  for example, ROUGE-1-P is 0.257 and ROUGE-3-F 0.878.| 
+1810.12196|52f8a3e3cd5d42126b5307adc740b71510a6bdf5|What tasks were evaluated?|ReviewQA's test set|Detection of an aspect in a review, Prediction of the customer general satisfaction, Prediction of the global trend of an aspect in a given review, Prediction of whether the rating of a given aspect is above or under a given value, Prediction of the exact rating of an aspect in a review, Prediction of the list of all the positive/negative aspects mentioned in the review, Comparison between aspects, Prediction of the strengths and weaknesses in a review| 
+1707.05236|ab9b0bde6113ffef8eb1c39919d21e5913a05081|What are their results on both datasets?|Combining  pattern based and Machine translation approaches gave the best overall F0.5 scores. It was 49.11 for FCE dataset  , 21.87 for the first annotation of  CoNLL-14, and 30.13 for the second annotation of CoNLL-14. | | 
+1908.11047|f2155dc4aeab86bf31a838c8ff388c85440fce6e|Does this method help in sentiment classification task improvement?|Yes|No| 
+1908.11047|ed6a15f0f7fa4594e51d5bde21cc0c6c1bedbfdc|For how many probe tasks the shallow-syntax-aware contextual embedding perform better than ELMo’s embedding?|performance of baseline ELMo-transformer and mSynC are similar, with mSynC doing slightly worse on 7 out of 9 tasks|3| 
+1908.11047|4d706ce5bde82caf40241f5b78338ea5ee5eb01e|What are the black-box probes used?|"CCG Supertagging CCGBank , PTB part-of-speech tagging, EWT part-of-speech tagging,
+Chunking, Named Entity Recognition, Semantic Tagging, Grammar Error Detection, Preposition Supersense Role, Preposition Supersense Function, Event Factuality Detection"|Probes are linear models trained on frozen cwrs to make predictions about linguistic (syntactic and semantic) properties of words and phrases.| 
+1908.11047|86bf75245358f17e35fc133e46a92439ac86d472|What are improvements for these two approaches relative to ELMo-only baselines?|only modest gains on three of the four downstream tasks| the performance differences across all tasks are small enough | 
+1612.08205|cd2878c5a52542ddf080b20bec005d9a74f2d916|What are the industry classes defined in this paper?|technology, religion, fashion, publishing, sports or recreation, real estate, agriculture/environment, law, security/military, tourism, construction, museums or libraries, banking/investment banking, automotive|Technology, Religion, Fashion, Publishing, Sports coach, Real Estate, Law, Environment, Tourism, Construction, Museums, Banking, Security, Automotive.| 
+1907.09369|fd2c6c26fd0ab3c10aae4f2550c5391576a77491|Do they report results only on English data?|Yes| | 
+1911.07555|307e8ab37b67202fe22aedd9a98d9d06aaa169c5|Does the paper report the performance of a baseline model on South African languages LID?|Yes|Yes| 
+1911.07555|e5c8e9e54e77960c8c26e8e238168a603fcdfcc6|Does the algorithm improve on the state-of-the-art methods?|Yes|From all reported results proposed method (NB+Lex) shows best accuracy on all 3 datasets - some models are not evaluated and not available in literature.| 
+1804.11346|2ceced87af4c8fdebf2dc959aa700a5c95bd518f|Is the dataset balanced between speakers of different L1s?|No|No| 
+1909.00175|badc9db40adbbf2ea7bac29f2e4e3b6b9175b1f9|What state-of-the-art results are achieved?|F1 score of 92.19 on homographic pun detection, 80.19 on homographic pun location, 89.76 on heterographic pun detection.|for the homographic dataset F1 score of 92.19 and 80.19 on detection and location and for the heterographic dataset F1 score of 89.76 on detection| 
+1909.00175|67b66fe67a3cb2ce043070513664203e564bdcbd|What baselines do they compare with?|They compare with the following models: by Pedersen (2017), by Pramanick and Das (2017), by Mikhalkova and Karyakin (2017),  by Vadehra (2017), Indurthi and Oota (2017), by Vechtomova (2017), by (Cai et al., 2018), and CRF.| | 
+1910.06036|92294820ac0d9421f086139e816354970f066d8a|How big are significant improvements?|Metrics show better results on all metrics compared to baseline except Bleu1  on Zhou split (worse by 0.11 compared to baseline). Bleu1 score on DuSplit is 45.66 compared to best baseline 43.47, other metrics on average by 1| | 
+2002.01984|9ec1f88ceec84a10dc070ba70e90a792fba8ce71|What was their highest MRR score?|0.5115|0.6103| 
+1809.03449|52f9cd05d8312ae3c7a43689804bac63f7cac34b|Do the authors hypothesize that humans' robustness to noise is due to their general knowledge?|Yes|Yes| 
+1903.09722|ab0fd94dfc291cf3e54e9b7a7f78b852ddc1a797|What is the previous state-of-the-art in summarization?|BIBREF26 |BIBREF26| 
+1806.11432|701571680724c05ca70c11bc267fb1160ea1460a|Does the method achieve sota performance on this dataset?|No| | 
+1806.11432|600b097475b30480407ce1de81c28c54a0b3b2f8|What are the baselines used in the paper?|GloVe vectors trained on Wikipedia Corpus with ensembling, and GloVe vectors trained on Airbnb Data without ensembling| | 
+1910.14537|5fda8539a97828e188ba26aad5cda1b9dd642bc8|How better is performance compared to previous state-of-the-art models?|F1 score of 97.5 on MSR and 95.7 on AS|"MSR: 97.7 compared to 97.5 of baseline
+AS: 95.7 compared to 95.6 of baseline"| 
+1910.14537|fabcd71644bb63559d34b38d78f6ef87c256d475|What are strong baselines model is compared to?|"Baseline models are:
+- Chen et al., 2015a
+- Chen et al., 2015b
+- Liu et al., 2016
+- Cai and Zhao, 2016
+- Cai et al., 2017
+- Zhou et al., 2017
+- Ma et al., 2018
+- Wang et al., 2019"| | 
+1702.03342|2a6003a74d051d0ebbe62e8883533a5f5e55078b|which neural embedding model works better?|the CRX model|3C model| 
+1702.03342|1b1b0c71f1a4b37c6562d444f75c92eb2c727d9b|What is the degree of dimension reduction of the efficient aggregation method?|The number of dimensions can be reduced by up to 212 times.| | 
+1805.03710|9c44df7503720709eac933a15569e5761b378046|For which languages do they build word embeddings for?|English| | 
+1909.03135|d509081673f5667060400eb325a8050fa5db7cc8|How big was the corpora they trained ELMo on?|2174000000, 989000000|2174 million tokens for English and 989 million tokens for Russian| 
+1804.07789|6cd25c637c6b772ce29e8ee81571e8694549c5ab|What dataset is used?|English WIKIBIO, French WIKIBIO , German WIKIBIO |WikiBio dataset,  introduce two new biography datasets, one in French and one in German| 
+1810.12085|ceb767e33fde4b927e730f893db5ece947ffb0d8|what topics did they label?|Demographics Age, DiagnosisHistory, MedicationHistory, ProcedureHistory, Symptoms/Signs, Vitals/Labs, Procedures/Results, Meds/Treatments, Movement, Other.|Demographics, Diagnosis History, Medication History, Procedure History, Symptoms, Labs, Procedures, Treatments, Hospital movements, and others| 
+1810.12085|c2cb6c4500d9e02fc9a1bdffd22c3df69655189f|did they compare with other extractive summarization methods?|No| | 
+1610.07809|06eb9f2320451df83e27362c22eb02f4a426a018|what levels of document preprocessing are looked at?|raw text, text cleaning through document logical structure detection, removal of keyphrase sparse sections of the document|Level 1, Level 2 and Level 3.| 
+2003.03044|46c9e5f335b2927db995a55a18b7c7621fd3d051|How many different phenotypes are present in the dataset?|15 clinical patient phenotypes|Thirteen different phenotypes are present in the dataset.| 
+2003.03044|ce0e2a8675055a5468c4c54dbb099cfd743df8a7|What are 10 other phenotypes that are annotated?|Adv. Heart Disease, Adv. Lung Disease, Alcohol Abuse, Chronic Neurologic Dystrophies, Dementia, Depression, Developmental Delay, Obesity, Psychiatric disorders and Substance Abuse| | 
+1909.00015|f8c1b17d265a61502347c9a937269b38fc3fcab1|HOw does the method perform compared with baselines?|On the datasets DE-EN, JA-EN, RO-EN, and EN-DE, the baseline achieves 29.79, 21.57, 32.70, and 26.02  BLEU score, respectively. The 1.5-entmax achieves  29.83, 22.13, 33.10, and 25.89 BLEU score, which is a difference of +0.04, +0.56, +0.40, and -0.13 BLEU score versus the baseline. The α-entmax achieves 29.90, 21.74, 32.89, and 26.93 BLEU score, which is a difference of +0.11, +0.17, +0.19, +0.91 BLEU score versus the baseline.| | 
+1705.01214|cc608df2884e1e82679f663ed9d9d67a4b6c03f3|What evaluation metrics did look at?|precision, recall, F1 and accuracy|Response time, resource consumption (memory, CPU, network bandwidth), precision, recall, F1, accuracy.| 
+1908.07195|79f9468e011670993fd162543d1a4b3dd811ac5d|How much improvement is gained from Adversarial Reward Augmented Maximum Likelihood (ARAML)?|ARAM has achieved improvement over all baseline methods using reverese perplexity and  slef-BLEU metric.  The maximum reverse perplexity improvement 936,16 is gained for EMNLP2017  WMT  dataset and  48,44 for COCO dataset.|Compared to the baselines, ARAML does not do better in terms of perplexity on COCO and EMNLP 2017 WMT datasets, but it does by up to 0.27 Self-BLEU points on COCO and 0.35 Self-BLEU on EMNLP 2017 WMT. In terms of Grammaticality and Relevance, it scores better than the baselines on up to 75.5% and 73% of the cases respectively.| 
+1703.07090|1bb7eb5c3d029d95d1abf9f2892c1ec7b6eef306|what was their character error rate?|2.49% for  layer-wise training, 2.63% for distillation, 6.26% for transfer learning.|Their best model achieved a 2.49% Character Error Rate.| 
+1703.07090|c0af8b7bf52dc15e0b33704822c4a34077e09cd1|which lstm models did they compare with?|Unidirectional LSTM networks with 2, 6, 7, 8, and  9 layers.| | 
+1707.03569|37edc25e39515ffc2d92115d2fcd9e6ceb18898b|What was the baseline?|SVMs, LR, BIBREF2|SVM INLINEFORM0, SVM INLINEFORM1, LR INLINEFORM2, MaxEnt| 
+1707.03569|e431661f17347607c3d3d9764928385a8f3d9650|By how much did they improve?|They decrease MAE in 0.34| | 
+1912.10011|664db503509b8236bc4d3dc39cebb74498365750|What is quantitative improvement of proposed method (the best variant) w.r.t. baseline (the best variant)?|Hierarchical-k| | 
+2003.11563|b0a18628289146472aa42f992d0db85c200ec64b|What metrics are used in evaluation?|precision, recall , F1 score| | 
+1909.00105|5b551ba47d582f2e6467b1b91a8d4d6a30c343ec|What metrics are used for evaluation?|"Byte-Pair Encoding perplexity  (BPE PPL),
+BLEU-1,
+BLEU-4,
+ROUGE-L,
+percentage of distinct unigram (D-1),
+percentage of distinct bigrams(D-2),
+user matching accuracy(UMA),
+Mean Reciprocal Rank(MRR)
+Pairwise preference over baseline(PP)"|BLEU-1/4 and ROUGE-L, likelihood of generated recipes using identical input specifications but conditioned on ten different user profiles, user matching accuracy (UMA), Mean Reciprocal Rank (MRR), neural scoring model from BIBREF33 to measure recipe-level coherence|" Distinct-1/2, UMA = User Matching Accuracy, MRR
+= Mean Reciprocal Rank, PP = Pairwise preference over baseline (evaluated for 310 recipe pairs per model)"
+1809.06537|e3c9e4bc7bb93461856e1f4354f33010bc7d28d5|what are the state-of-the-art models?|SVM , CNN , GRU , CNN/GRU+law, r-net , AoA |SVM with lexical features in accordance with previous works BIBREF16 , BIBREF17 , BIBREF1 , BIBREF15 , BIBREF4, attention-based method BIBREF3 and other methods we deem important, some off-the-shelf RC models, including r-net BIBREF5 and AoA BIBREF6 , which are the leading models on SQuAD leaderboard| 
+2003.03014|0682bf049f96fa603d50f0fdad0b79a5c55f6c97|Do they analyze specific derogatory words?|Yes|Yes| 
+1908.08345|c17b609b0b090d7e8f99de1445be04f8f66367d4|What rouge score do they achieve?|"Best results on unigram:
+CNN/Daily Mail: Rogue F1 43.85
+NYT: Rogue Recall 49.02
+XSum: Rogue F1 38.81"|Highest scores for ROUGE-1, ROUGE-2 and ROUGE-L on CNN/DailyMail test set are 43.85, 20.34 and 39.90 respectively; on the XSum test set 38.81, 16.50 and 31.27 and on the NYT test set 49.02, 31.02 and 45.55| 
+1605.07333|6cd8bad8a031ce6d802ded90f9754088e0c8d653|By how much does their best model outperform the state-of-the-art?|0.8% F1 better than the best state-of-the-art|Best proposed model achieves F1 score of 84.9 compared to best previous result of 84.1.| 
+2003.08385|35b3ce3a7499070e9b280f52e2cb0c29b0745380|Does the paper report the performance of the model for each individual language?|Yes|Yes| 
+2003.08385|71ba1b09bb03f5977d790d91702481cc406b3767|What is the performance of the baseline?|M-Bert had 76.6 F1 macro score.|75.1% and 75.6% accuracy| 
+2003.08385|bd40f33452da7711b65faaa248aca359b27fddb6|What was the performance of multilingual BERT?|BERT had 76.6 F1 macro score on x-stance dataset.| | 
+1908.07245|e82fa03f1638a8c59ceb62bb9a6b41b498950e1f|What is the state of the art system mentioned?|"Two knowledge-based systems,
+two traditional word expert supervised systems, six recent neural-based systems, and one BERT feature-based system."| | 
+1901.01010|1097768b89f8bd28d6ef6443c94feb04c1a1318e|Do the methods that work best on academic papers also work best on Wikipedia?|Yes|No| 
+1901.01010|fc1679c714eab822431bbe96f0e9cf4079cd8b8d|What is their system's absolute accuracy?|59.4% on wikipedia dataset, 93.4% on peer-reviewed archive AI papers, 77.1%  on peer-reviewed archive Computation and Language papers, and 79.9% on peer-reviewed archive Machine Learning papers| | 
+1809.02279|c35806cf68220b2b9bb082b62f493393b9bdff86|What were their best results on the benchmark datasets?|In SNLI, our best model achieves the new state-of-the-art accuracy of 87.0%,  we can see that our models outperform other models by large margin, achieving the new state of the art., Our models achieve the new state-of-the-art accuracy on SST-2 and competitive accuracy on SST-5|accuracy of 87.0%| 
+2002.01207|76ed74788e3eb3321e646c48ae8bf6cdfe46dca1|what linguistics features are used?|POS, gender/number and stem POS| | 
+1909.06162|c9305e5794b65b33399c22ac8e4e024f6b757a30|What is best performing model among author's submissions, what performance it had?|"For SLC task, the ""ltuorp"" team  has the best performing  model (0.6323/0.6028/0.6649 for F1/P/R  respectively) and for FLC task the ""newspeak"" team  has the best performing  model (0.2488/0.2863/0.2201 for F1/P/R respectively)."| | 
+1909.06162|56b7319be68197727baa7d498fa38af0a8440fe4|What extracted features were most influencial on performance?|Linguistic|BERT| 
+1909.06162|2268c9044e868ba0a16e92d2063ada87f68b5d03|Did ensemble schemes help in boosting peformance, by how much?|The best ensemble topped the best single model by 0.029 in F1 score on dev (external).|They increased F1 Score by 0.029 in Sentence Level Classification, and by 0.044 in Fragment-Level classification| 
+1909.06162|6b7354d7d715bad83183296ce2f3ddf2357cb449|Which basic neural architecture perform best by itself?|BERT| | 
+1909.06162|e949b28f6d1f20e18e82742e04d68158415dc61e|What participating systems had better results than ones authors submitted?|"For SLC task : Ituorp, ProperGander and YMJA  teams had better results.
+For FLC task: newspeak and Antiganda teams had better results."| | 
+1810.05241|a3efe43a72b76b8f5e5111b54393d00e6a5c97ab|What is the size of the StackExchange dataset?|around 332k questions| | 
+1810.05241|f1e90a553a4185a4b0299bd179f4f156df798bce|What were the baselines?|CopyRNN (Meng et al., 2017), Multi-Task (Ye and Wang, 2018), and TG-Net (Chen et al., 2018b)|CopyRNN BIBREF0, KEA BIBREF4 and Maui BIBREF8, CopyRNN*| 
+1909.01383|b68f72aed961d5ba152e9dc50345e1e832196a76|by how much did the BLEU score improve?|On average 0.64 | | 
+2001.08868|df0257ab04686ddf1c6c4d9b0529a7632330b98e|How better does new approach behave than existing solutions?| On the other hand, phase 1 of Go-Explore finds an optimal trajectory with approximately half the interactions with the environment, Moreover, the trajectory length found by Go-Explore is always optimal (i.e. 30 steps) whereas both DQN++ and DRQN++ have an average length of 38 and 42 respectively., Especially interesting is that the performance of DRRN is substantially lower than that of the Go-Explore Seq2Seq model|"On Coin Collector, proposed model finds shorter path in fewer number of interactions with enironment.
+On Cooking World, proposed model uses smallest amount of steps and on average has bigger score and number of wins by significant margin."| 
+1910.12795|3415762847ed13acc3c90de60e3ef42612bc49af|How much is classification performance improved in experiments for low data regime and class-imbalance problems?|"Low data: SST-5, TREC, IMDB around 1-2 accuracy points better than baseline
+Imbalanced labels: the improvement over the base model increases as the data gets more imbalanced, ranging from around 6 accuracy points on 100:1000 to over 20 accuracy points on 20:1000"| | 
+2003.04866|a616a3f0d244368ec588f04dfbc37d77fda01b4c|What are the 12 languages covered?|Chinese Mandarin, Welsh, English, Estonian, Finnish, French, Hebrew, Polish, Russian, Spanish, Kiswahili, Yue Chinese|Chinese Mandarin, Welsh, English, Estonian, Finnish, French, Hebrew, Polish, Russian, Spanish, Kiswahili, Yue Chinese| 
+1901.08079|5fa36dc8f7c4e65acb962fc484989d20b8fdaeec|Do they report results only on English data?|Yes| | 
+1705.01265|12159f04e0427fe33fa05af6ba8c950f1a5ce5ea|Which hyperparameters were varied in the experiments on the four tasks?|number of clusters, seed value in clustering, selection of word vectors, window size and dimension of embedding|different number of clusters, different embeddings| 
+1906.10225|01f4a0a19467947a8f3bdd7ec9fac75b5222d710|what were the evaluation metrics?|INLINEFORM0 scores|Unlabeled sentence-level F1, perplexity, grammatically judgment performance| 
+1712.05999|907b3af3cfaf68fe188de9467ed1260e52ec6cf1|What were their distribution results?|Distributions of Followers, Friends and URLs are significantly different between the set of tweets containing fake news and those non containing them, but for Favourites, Mentions, Media, Retweets and Hashtags they are not significantly different| | 
+1808.09029|6aaf12505add25dd133c7b0dafe8f4fe966d1f1d|what previous RNN models do they compare with?|Variational LSTM, CharCNN, Pointer Sentinel-LSTM, RHN, NAS Cell, SRU, QRNN, RAN, 4-layer skip-connection LSTM, AWD-LSTM, Quantized LSTM| | 
+2004.04721|5bc1dc6ebcb88fd0310b21d2a74939e35a4c1a11|What are the languages they use in their experiment?|"English
+French
+Spanish
+German
+Greek
+Bulgarian
+Russian
+Turkish
+Arabic
+Vietnamese
+Thai
+Chinese
+Hindi
+Swahili
+Urdu
+Finnish"|English, Spanish, Finnish| 
+2002.04181|cd06d775f491b4a17c9d616a8729fd45aa2e79bf|Which sentiment class is the most accurately predicted by ELS systems?|neutral sentiment| | 
+1908.06264|0af16b164db20d8569df4ce688d5a62c861ace0b|what were the baselines?|BOW-LR, BOW-RF. TFIDF-RF, TextCNN, C-TextCNN|bag-of-words (BOW), term frequency–inverse document frequency (TFIDF), neural-based word embedding, Logistic Regression (LR), Random Forest (RF), TextCNN BIBREF10 with initial word embedding as GloVe| 
+1908.06264|6a14379fee26a39631aebd0e14511ce3756e42ad|What BERT models are used?|BERT-base, BERT-large, BERT-uncased, BERT-cased| | 
+1709.10367|40c0f97c3547232d6aa039fcb330f142668dea4b|Do they evaluate on English only datasets?|No| | 
+1908.06267|2858620e0498db2f2224bfbed5263432f0570832|Which component is the least impactful?|Based on table results provided changing directed to undirected edges had least impact - max abs difference of 0.33 points on all three datasets.| | 
+1908.06267|545e92833b0ad4ba32eac5997edecf97a366a244|Which component has the greatest impact on performance?|Increasing number of message passing iterations showed consistent improvement in performance - around 1 point improvement compared between 1 and 4 iterations|Removing the master node deteriorates performance across all datasets| 
+1701.05574|bbb77f2d6685c9257763ca38afaaef29044b4018|What is the best reported system?|Gaze Sarcasm using Multi Instance Logistic Regression.|the MILR classifier| 
+1701.05574|74b338d5352fe1a6fd592e38269a4c81fe79b866|What cognitive features are used?|"Readability (RED),  Number of Words (LEN), Avg. Fixation Duration (FDUR), Avg. Fixation Count (FC), Avg. Saccade Length (SL), Regression Count (REG), Skip count (SKIP), Count of regressions from second half
+to first half of the sentence (RSF), Largest Regression Position (LREG),  Edge density of the saliency gaze
+graph (ED),  Fixation Duration at Left/Source
+(F1H, F1S),  Fixation Duration at Right/Target
+(F2H, F2S),  Forward Saccade Word Count of
+Source (PSH, PSS),  Forward SaccadeWord Count of Destination
+(PSDH, PSDS), Regressive Saccade Word Count of
+Source (RSH, RSS),  Regressive Saccade Word Count of
+Destination (RSDH, RSDS)"| | 
+1909.00694|9d578ddccc27dd849244d632dd0f6bf27348ad81|What are the results?|"Using all data to train: AL -- BiGRU achieved 0.843 accuracy, AL -- BERT achieved 0.863 accuracy, AL+CA+CO -- BiGRU achieved 0.866 accuracy, AL+CA+CO -- BERT achieved 0.835, accuracy, ACP -- BiGRU achieved 0.919 accuracy, ACP -- BERT achived 0.933, accuracy, ACP+AL+CA+CO -- BiGRU achieved 0.917 accuracy, ACP+AL+CA+CO -- BERT achieved 0.913 accuracy. 
+Using a subset to train: BERT achieved 0.876 accuracy using ACP (6K), BERT achieved 0.886 accuracy using ACP (6K) + AL, BiGRU achieved 0.830 accuracy using ACP (6K), BiGRU achieved 0.879 accuracy using ACP (6K) + AL + CA + CO."| | 
+1909.00694|44c4bd6decc86f1091b5fc0728873d9324cdde4e|How big is the Japanese data?|7000000 pairs of events were extracted from the Japanese Web corpus, 529850 pairs of events were extracted from the ACP corpus|The ACP corpus has around 700k events split into positive and negative polarity | 
+1909.00694|c029deb7f99756d2669abad0a349d917428e9c12|How big are improvements of supervszed learning results trained on smalled labeled data enhanced with proposed approach copared to basic approach?|3%| | 
+2003.07723|3a9d391d25cde8af3334ac62d478b36b30079d74|Does the paper report macro F1?|Yes|Yes| 
+1910.14497|8958465d1eaf81c8b781ba4d764a4f5329f026aa|What are the three measures of bias which are reduced in experiments?|RIPA, Neighborhood Metric, WEAT| | 
+2003.12218|4f243056e63a74d1349488983dc1238228ca76a7|Do they list all the named entity types present?|No| | 
+1904.09678|8f87215f4709ee1eb9ddcc7900c6c054c970160b|how is quality measured?|Accuracy and the macro-F1 (averaged F1 over positive and negative classes) are used as a measure of quality.| | 
+1910.04269|dc1fe3359faa2d7daa891c1df33df85558bc461b|Does the model use both spectrogram images and raw waveforms as features?|No| | 
+2001.00137|3b745f086fb5849e7ce7ce2c02ccbde7cfdedda5|By how much do they outperform other models in the sentiment in intent classification tasks?|In the sentiment classification task by 6% to 8% and in the intent classification task by 0.94% on average| | 
+2002.06644|680dc3e56d1dc4af46512284b9996a1056f89ded|What is the baseline for the experiments?|FastText, BiLSTM, BERT|FastText, BERT , two-layer BiLSTM architecture with GloVe word embeddings| 
+1809.04960|8cc56fc44136498471754186cfa04056017b4e54|By how much does their system outperform the lexicon-based models?|"Under the retrieval evaluation setting, their proposed model + IR2 had better MRR than NVDM by 0.3769, better MR by 4.6, and better Recall@10 by  20 . 
+Under the generative evaluation setting the proposed model + IR2 had better BLEU by 0.044 , better CIDEr by 0.033, better ROUGE by 0.032, and better METEOR by 0.029"|Proposed model is better than both lexical based models by significan margin in all metrics: BLEU 0.261 vs 0.250, ROUGLE 0.162 vs 0.155 etc.| 
+1909.08859|171ebfdc9b3a98e4cdee8f8715003285caeb2f39|How better is accuracy of new model compared to previously reported models?|"Average accuracy of proposed model vs best prevous result:
+Single-task Training: 57.57 vs 55.06
+Multi-task Training: 50.17 vs 50.59"| | 
+1905.00563|bc9c31b3ce8126d1d148b1025c66f270581fde10|What datasets are used to evaluate this approach?| Kinship and Nations knowledge graphs, YAGO3-10 and WN18KGs knowledge graphs |WN18 and YAGO3-10| 
+1902.00330|b0376a7f67f1568a7926eff8ff557a93f434a253|How big is the performance difference between this method and the baseline?|Comparing with the highest performing baseline: 1.3 points on ACE2004 dataset, 0.6 points on CWEB dataset, and 0.86 points in the average of all scores.| | 
+1810.06743|564dcaf8d0bcc274ab64c784e4c0f50d7a2c17ee|Which languages do they validate on?|Ar, Bg, Ca, Cs, Da, De, En, Es, Eu, Fa, Fi, Fr, Ga, He, Hi, Hu, It, La, Lt, Lv, Nb, Nl, Nn, PL, Pt, Ro, Ru, Sl, Sv, Tr, Uk, Ur|We apply this conversion to the 31 languages, Arabic, Hindi, Lithuanian, Persian, and Russian. , Dutch, Spanish| 
+1905.11901|4547818a3bbb727c4bb4a76554b5a5a7b5c5fedb|what amounts of size were used on german-english?|Training data with 159000, 80000, 40000, 20000, 10000 and 5000 sentences, and 7584 sentences for development|ultra-low data condition (100k words of training data) and the full IWSLT 14 training corpus (3.2M words)| 
+1912.13109|5908d7fb6c48f975c5dfc5b19bb0765581df2b25|How big is the dataset?|3189 rows of text messages|Resulting dataset was 7934 messages for train and 700 messages for test.| 
+1911.03310|66125cfdf11d3bf8e59728428e02021177142c3a|How they demonstrate that language-neutral component is sufficiently general in terms of modeling semantics to allow high-accuracy word-alignment?|Table TABREF15 shows that word-alignment based on mBERT representations surpasses the outputs of the standard FastAlign tool even if it was provided large parallel corpus. This suggests that word-level semantics are well captured by mBERT contextual embeddings. For this task, learning an explicit projection had a negligible effect on the performance.|explicit projection had a negligible effect on the performance| 
+1909.00578|ff28d34d1aaa57e7ad553dba09fc924dc21dd728|What are their correlation results?|High correlation results range from 0.472 to 0.936| | 
+1904.05584|323e100a6c92d3fe503f7a93b96d821408f92109|Which downstream sentence-level tasks do they evaluate on?|BIBREF13 , BIBREF18| | 
+1910.03891|52f7e42fe8f27d800d1189251dfec7446f0e1d3b|How much better is performance of proposed method than state-of-the-art methods in experiments?|Accuracy of best proposed method KANE (LSTM+Concatenation) are 0.8011, 0.8592, 0.8605 compared to best state-of-the art method R-GCN + LR 0.7721, 0.8193, 0.8229 on three datasets respectively.| | 
+1610.00879|6412e97373e8e9ae3aa20aa17abef8326dc05450|What baseline model is used?|Human evaluators| | 
+1610.00879|957bda6b421ef7d2839c3cec083404ac77721f14|What stylistic features are used to detect drunk texts?|"LDA unigrams (Presence/Count), POS Ratio, #Named Entity Mentions, #Discourse Connectors,  Spelling errors, Repeated characters, Capitalisation, Length,  Emoticon (Presence/Count ) 
+ and Sentiment Ratio"|LDA unigrams (Presence/Count), POS Ratio, #Named Entity Mentions, #Discourse Connectors, Spelling errors, Repeated characters, Capitalization, Length, Emoticon (Presence/Count), Sentiment Ratio.| 
+1704.05572|eb95af36347ed0e0808e19963fe4d058e2ce3c9f|What is the accuracy of the proposed technique?|51.7 and 51.6 on 4th and 8th grade question sets with no curated knowledge. 47.5 and 48.0 on 4th and 8th grade question sets when both solvers are given the same knowledge| | 
+1911.07228|71d59c36225b5ee80af11d3568bdad7425f17b0c|How much better was the BLSTM-CNN-CRF than the BLSTM-CRF?|Best BLSTM-CNN-CRF had F1 score 86.87 vs 86.69 of best BLSTM-CRF | | 
+1603.07044|08333e4dd1da7d6b5e9b645d40ec9d502823f5d7|How much performance gap between their approach and the strong handcrafted method?|0.007 MAP on Task A, 0.032 MAP on Task B, 0.055 MAP on Task C| | 
+1902.09314|8434974090491a3c00eed4f22a878f0b70970713|How big is their model?|Proposed model has 1.16 million parameters and 11.04 MB.| | 
+1910.11769|a4e66e842be1438e5cd8d7cb2a2c589f494aee27|Which tested technique was the worst performer?|Depeche + SVM| | 
+1909.13375|579941de2838502027716bae88e33e79e69997a6|What is difference in peformance between proposed model and state-of-the art on other question types?|"For single-span questions, the proposed LARGE-SQUAD improve performance of the MTMSNlarge baseline for 2.1 EM and 1.55 F1.
+For number type question,  MTMSNlarge baseline  have improvement over LARGE-SQUAD for 3,11  EM and  2,98 F1. 
+For date question,  LARGE-SQUAD have improvements in 2,02 EM but MTMSNlarge have improvement of 4,39 F1."| | 
+1909.13375|9a65cfff4d99e4f9546c72dece2520cae6231810|What is the performance of proposed model on entire DROP dataset?|The proposed model achieves  EM 77,63 and F1 80,73  on the test and EM  76,95 and  F1 80,25 on the dev| | 
+1909.00430|47a30eb4d0d6f5f2ff4cdf6487265a25c1b18fd8|Does the system trained only using XR loss outperform the fully supervised neural system?|Yes| | 
+1909.00430|e42fbf6c183abf1c6c2321957359c7683122b48e|How accurate is the aspect based sentiment classifier trained only using the XR loss?|"BiLSTM-XR-Dev Estimation accuracy is 83.31 for SemEval-15 and 87.68 for SemEval-16.
+BiLSTM-XR accuracy is 83.31 for SemEval-15 and 88.12 for SemEval-16.
+"| | 
+1910.00912|7c794fa0b2818d354ca666969107818a2ffdda0c|What metrics other than entity tagging are compared?|We also report the metrics in BIBREF7 for consistency, we report the span F1,  Exact Match (EM) accuracy of the entire sequence of labels, metric that combines intent and entities| | 
+1910.03814|4e9684fd68a242cb354fa6961b0e3b5c35aae4b6|What is the results of multimodal compared to unimodal models?|"Unimodal LSTM vs Best Multimodal (FCM)
+- F score: 0.703 vs 0.704
+- AUC: 0.732 vs 0.734 
+- Mean Accuracy: 68.3 vs 68.4 "| | 
+1701.00185|9e04730907ad728d62049f49ac828acb4e0a1a2a|What were their performance results?|On SearchSnippets dataset ACC 77.01%, NMI 62.94%, on StackOverflow dataset ACC 51.14%, NMI 49.08%, on Biomedical dataset ACC 43.00%, NMI 38.18%| | 
+1701.00185|5a0841cc0628e872fe473874694f4ab9411a1d10|By how much did they outperform the other methods?|on SearchSnippets dataset by 6.72% in ACC, by 6.94% in NMI; on Biomedical dataset by 5.77% in ACC, 3.91% in NMI| | 
+1912.01673|2d536961c6e1aec9f8491e41e383dc0aac700e0a|What are all 15 types of modifications ilustrated in the dataset?|"- paraphrase 1
+- paraphrase 2
+- different meaning
+- opposite meaning
+- nonsense
+- minimal change
+- generalization
+- gossip
+- formal sentence
+- non-standard sentence
+- simple sentence
+- possibility
+- ban
+- future
+- past"| | 
+1706.08032|efb3a87845460655c53bd7365bcb8393c99358ec|What were their results on the three datasets?|accuracy of 86.63 on STS, 85.14 on Sanders and 80.9 on HCR| | 
+1706.08032|d60a3887a0d434abc0861637bbcd9ad0c596caf4|What semantic rules are proposed?|rules that compute polarity of words after POS tagging or parsing steps| | 
+1911.01799|8c0a0747a970f6ea607ff9b18cfeb738502d9a95|What was the performance of both approaches on their dataset?|ERR of 19.05 with i-vectors and 15.52 with x-vectors| | 
+1911.01799|a2be2bd84e5ae85de2ab9968147b3d49c84dfb7f|What genres are covered?|genre, entertainment, interview, singing, play, movie, vlog, live broadcast, speech, drama, recitation and advertisement| | 
+1911.01799|944d5dbe0cfc64bf41ea36c11b1d378c408d40b8|Which of the two speech recognition models works better overall on CN-Celeb?|x-vector| | 
+1911.01799|327e6c6609fbd4c6ae76284ca639951f03eb4a4c|By how much is performance on CN-Celeb inferior to performance on VoxCeleb?|For i-vector system, performances are 11.75% inferior to voxceleb. For x-vector system, performances are 10.74% inferior to voxceleb| | 
+1812.06705|df8cc1f395486a12db98df805248eb37c087458b|On what datasets is the new model evaluated on?|SST (Stanford Sentiment Treebank), Subj (Subjectivity dataset), MPQA Opinion Corpus, RT is another movie review sentiment dataset, TREC is a dataset for classification of the six question types| | 
+1812.06705|6e97c06f998f09256be752fa75c24ba853b0db24|How do the authors measure performance?|Accuracy across six datasets| | 
+1812.06705|63bb39fd098786a510147f8ebc02408de350cb7c|Are other pretrained language models also evaluated for contextual augmentation? |No| | 
+1905.08949|999b20dc14cb3d389d9e3ba5466bc3869d2d6190|What is the latest paper covered by this survey?|Kim et al. (2019)| | 
+2001.06286|6e962f1f23061f738f651177346b38fd440ff480|What is the state of the art?|BERTje BIBREF8, an ULMFiT model (Universal Language Model Fine-tuning for Text Classification model) BIBREF19., mBERT| | 
+1902.00672|babe72f0491e65beff0e5889380e8e32d7a81f78|How does the model compare with the MMR baseline?| Moreover, our TL-TranSum method also outperforms other approaches such as MaxCover ( $5\%$ ) and MRMR ( $7\%$ )| | 
+2001.10161|c180f44667505ec03214d44f4970c0db487a8bae|How well did the system do?|the neural approach is generally preferred by a greater percentage of participants than the rules or random, human-made game outperforms them all| | 
+1909.00279|d484a71e23d128f146182dccc30001df35cdf93f|How much is proposed model better in perplexity and BLEU score than typical UMT models?|"Perplexity of the best model is 65.58 compared to best baseline 105.79.
+Bleu of the best model is 6.57 compared to best baseline 5.50."| | 
+1701.02877|94e0cf44345800ef46a8c7d52902f074a1139e1a|What web and user-generated NER datasets are used for the analysis?|MUC, CoNLL, ACE, OntoNotes, MSM, Ritter, UMBC| | 
+1911.00069|5c90e1ed208911dbcae7e760a553e912f8c237a5|How big are the datasets?|"In-house dataset consists of  3716 documents 
+ACE05 dataset consists of  1635 documents"| | 
+1810.00663|3aee5c856e0ee608a7664289ffdd11455d153234|What was the performance of their model?|For test-repeated set, EM score of 61.17, F1 of 93.54, ED of 0.75 and GM of 61.36. For test-new set, EM score of 41.71, F1 of 91.02, ED of 1.22 and GM of 41.81| | 
+1809.05752|fbee81a9d90ff23603ee4f5986f9e8c0eb035b52|What are their initial results on this task?|Achieved the highest per-domain scores on Substance (F1 ≈ 0.8) and the lowest scores on Interpersonal and Mood (F1 ≈ 0.5), and show consistency in per-domain performance rankings between MLP and RBF models.| | 
+1910.05154|85abd60094c92eb16f39f861c6de8c2064807d02|What are the different bilingual models employed?| Neural Machine Translation (NMT) models are trained between language pairs, using as source language the translation (word-level) and as target| | 
+1909.00754|ed7a3e7fc1672f85a768613e7d1b419475950ab4|Does this approach perform better in the multi-domain or single-domain setting?|single-domain setting| | 
+2002.11402|1771a55236823ed44d3ee537de2e85465bf03eaf|What is the difference in recall score between the systems?|Between the model and Stanford, Spacy and Flair the differences are 42.91, 25.03, 69.8 with Traditional NERs as reference and  49.88, 43.36, 62.43 with Wikipedia titles as reference.| | 
+2002.11402|1d74fd1d38a5532d20ffae4abbadaeda225b6932|What is their f1 score and recall?|F1 score and Recall are 68.66, 80.08 with Traditional NERs as reference and 59.56, 69.76 with Wikipedia titles as reference.| | 
+2002.00652|cc9f0ac8ead575a9b485a51ddc06b9ecb2e2a44d|How big is improvement in performances of proposed model over state of the art?|Compared with the previous SOTA without BERT on SParC, our model improves Ques.Match and Int.Match by $10.6$ and $5.4$ points, respectively.| | 
+1905.06566|fc8bc6a3c837a9d1c869b7ee90cf4e3c39bcd102|Is the baseline a non-heirarchical model like BERT?|There were hierarchical and non-hierarchical baselines; BERT was one of those baselines| | 
+1901.04899|40e3639b79e2051bf6bce300d06548e7793daee0|Did they compare against other systems?|Yes| | 
+1606.05320|6ea63327ffbab2fc734dd5c2414e59d3acc56ea5|How large is the gap in performance between the HMMs and the LSTMs?|With similar number of parameters, the log likelihood is about 0.1 lower for LSTMs across datasets. When the number of parameters in LSTMs is increased, their log likelihood is up to 0.7 lower.| | 
+1809.10644|a3f108f60143d13fe38d911b1cc3b17bdffde3bd|what was their system's f1 performance?|Proposed model achieves 0.86, 0.924, 0.71 F1 score on SR, HATE, HAR datasets respectively.| | 
+1910.03467|84737d871bde8058d8033e496179f7daec31c2d3|Is the supervised morphological learner tested on Japanese?|No| | 
+1908.07816|c034f38a570d40360c3551a6469486044585c63c|How better is proposed method than baselines perpexity wise?|Perplexity of proposed MEED model is 19.795 vs 19.913 of next best result on test set.| | 
+1810.09774|a48c6d968707bd79469527493a72bfb4ef217007|Which training dataset allowed for the best generalization to benchmark sets?|MultiNLI| | 
+2004.03744|5dfa59c116e0ceb428efd99bab19731aa3df4bbd|How many natural language explanations are human-written?|Totally 6980 validation and test image-sentence pairs have been corrected.| | 
+2001.06888|8a871b136ccef78391922377f89491c923a77730|What are the baseline state of the art models?|Stanford NER, BiLSTM+CRF, LSTM+CNN+CRF, T-NER and BiLSTM+CNN+Co-Attention| | 
+1709.10217|96c09ece36a992762860cde4c110f1653c110d96|What was the result of the highest performing system?|"For task 1 best F1 score was 0.9391 on closed and 0.9414 on open test.
+For task2 best result had: Ratio 0.3175 , Satisfaction 64.53, Fluency 0, Turns -1 and Guide 2"| | 
+1901.02262|2d274c93901c193cf7ad227ab28b1436c5f410af|What are the baselines that Masque is compared against?|BiDAF, Deep Cascade QA, S-Net+CES2S, BERT+Multi-PGNet, Selector+CCG, VNET, DECAPROP, MHPGM+NOIC, ConZNet, RMR+A2D| | 
+1901.02262|e63bde5c7b154fbe990c3185e2626d13a1bad171|What is the performance achieved on NarrativeQA?|Bleu-1: 54.11, Bleu-4: 30.43, METEOR: 26.13, ROUGE-L: 59.87| | 
+1911.12579|a1064307a19cd7add32163a70b6623278a557946|How many uniue words are in the dataset?|908456 unique words are available in collected corpus.| | 
+1707.00110|6e8c587b6562fafb43a7823637b84cd01487059a|How much is the BLEU score?|Ranges from 44.22 to 100.00 depending on K and the sequence length.| | 
+1909.01013|d0c79f4a5d5c45fe673d9fcb3cd0b7dd65df7636|What are new best results on standard benchmark?|"New best results of accuracy (P@1) on Vecmap:
+Ours-GeoMMsemi: EN-IT 50.00 IT-EN 42.67 EN-DE 51.60 DE-EN 47.22 FI-EN 39.62 EN-ES 39.47 ES-EN 36.43"| | 
+1909.01013|54c7fc08598b8b91a8c0399f6ab018c45e259f79|How better is performance compared to competitive baselines?|"Proposed method vs best baseline result on Vecmap (Accuracy P@1):
+EN-IT: 50 vs 50
+IT-EN: 42.67 vs 42.67
+EN-DE: 51.6 vs 51.47
+DE-EN: 47.22 vs 46.96
+EN-FI: 35.88 vs 36.24
+FI-EN: 39.62 vs 39.57
+EN-ES: 39.47 vs 39.30
+ES-EN: 36.43 vs 36.06"| | 
+1909.01013|03ce42ff53aa3f1775bc57e50012f6eb1998c480|What 6 language pairs is experimented on?|"EN<->ES
+EN<->DE
+EN<->IT
+EN<->EO
+EN<->MS
+EN<->FI"| | 
+1605.08675|63496705fff20c55d4b3d8cdf4786f93e742dd3d|Do they compare DeepER against other approaches?|Yes| | 
+1911.04952|447eb98e602616c01187960c9c3011c62afd7c27|What are lyrical topics present in the metal genre?|Table TABREF10 displays the twenty resulting topics| | 
+1910.00825|f398587b9a0008628278a5ea858e01d3f5559f65|By how much does SPNet outperforms state-of-the-art abstractive summarization methods on evaluation metrics?|"SPNet vs best baseline:
+ROUGE-1: 90.97 vs 90.68
+CIC: 70.45 vs 70.25"| | 
+1910.00458|9fe4a2a5b9e5cf29310ab428922cc8e7b2fc1d11|What are state of the art methods MMM is compared to?|FTLM++, BERT-large, XLNet| | 
+1909.08824|8e2b125426d1220691cceaeaf1875f76a6049cbd|By how much do they improve the accuracy of inferences over state-of-the-art methods?|"ON Event2Mind, the accuracy of proposed method is improved by  absolute BLUE  2.9,  10.87, 1.79 for xIntent, xReact and oReact respectively.
+On Atomic dataset, the accuracy of proposed method is improved by  absolute BLUE 3.95.   4.11, 4.49 for xIntent, xReact and oReact.respectively."| | 
+1909.08824|42bc4e0cd0f3e238a4891142f1b84ebcd6594bf1|Which models do they use as baselines on the Atomic dataset?|RNN-based Seq2Seq, Variational Seq2Seq, VRNMT , CWVAE-Unpretrained| | 
+1701.03214|a978a1ee73547ff3a80c66e6db3e6c3d3b6512f4|How much improvement does their method get over the fine tuning baseline?|0.08 points on the 2011 test set, 0.44 points on the 2012 test set, 0.42 points on the 2013 test set for IWSLT-CE.| | 
+1611.02550|b6b5f92a1d9fa623b25c70c1ac67d59d84d9eec8|By how much do they outpeform previous results on the word discrimination task?|Their best average precision tops previous best result by 0.202| | 
+1908.05434|2d4d0735c50749aa8087d1502ab7499faa2f0dd8|By how much do they outperform previous state-of-the-art models?|Proposed ORNN has 0.769, 1.238, 0.818, 0.772 compared to 0.778, 1.244, 0.813, 0.781 of best state of the art result on Mean Absolute Error (MAE), macro-averaged Mean Absolute Error (MAEM ), binary classification accuracy (Acc.) and weighted binary classification accuracy (Wt. Acc.)| | 
+1909.02480|ba6422e22297c7eb0baa381225a2f146b9621791|What is the performance difference between proposed method and state-of-the-arts on these datasets?|Difference is around 1 BLEU score lower on average than state of the art methods.| | 
+2004.01694|cc5d8e12f6aecf6a5f305e2f8b3a0c67f49801a9|What percentage fewer errors did professional translations make?|36%| | 
+1904.10500|e659ceb184777015c12db2da5ae396635192f0b0|Are the intent labels imbalanced in the dataset?|Yes| | 
+1711.11221|c1c611409b5659a1fd4a870b6cc41f042e2e9889|What evaluations did the authors use on their system?|BLEU scores, exact matches of words in both translations and topic cache, and cosine similarities of adjacent sentences for coherence.| | 
+1809.09795|46570c8faaeefecc8232cfc2faab0005faaba35f|What are the 7 different datasets?|SemEval 2018 Task 3, BIBREF20, BIBREF4, SARC 2.0, SARC 2.0 pol, Sarcasm Corpus V1 (SC-V1), Sarcasm Corpus V2 (SC-V2)| | 
+2003.01769|e1b36927114969f3b759cba056cfb3756de474e4|By how much does using phonetic feedback improve state-of-the-art systems?|Improved AECNN-T by 2.1 and AECNN-T-SM BY 0.9| | 
+1806.09103|f513e27db363c28d19a29e01f758437d7477eb24|what are the baselines?|AS Reader, GA Reader, CAS Reader| | 
+1711.02013|3070d6d6a52aa070f0c0a7b4de8abddd3da4f056|How do they measure performance of language model tasks?|BPC, Perplexity| | 
+1707.03764|157b9f6f8fb5d370fa23df31de24ae7efb75d6f3|How do their results compare against other competitors in the PAN 2017 shared task on Author Profiling?|They achieved best result in the PAN 2017 shared task with accuracy for Variety prediction task 0.0013 more than the 2nd best baseline, accuracy for Gender prediction task 0.0029 more than 2nd best baseline and accuracy for Joint prediction task 0.0101 more than the 2nd best baseline| | 
+1701.06538|e8fcfb1412c3b30da6cbc0766152b6e11e17196c|What improvement does the MOE model make over the SOTA on language modelling?|Perpexity is improved from 34.7 to 28.0.| | 
+1905.10810|44104668796a6ca10e2ea3ecf706541da1cec2cf|What is the difference in performance between the interpretable system (e.g. vectors and cosine distance) and LSTM with ELMo system?|Accuracy of best interpretible system was 0.3945 while accuracy of LSTM-ELMo net was 0.6818.| | 
+1910.07481|c1f4d632da78714308dc502fe4e7b16ea6f76f81|Which language-pair had the better performance?|French-English| | 
+2001.05493|e829f008d62312357e0354a9ed3b0827c91c9401|Which psycholinguistic and basic linguistic features are used?|Emotion Sensor Feature, Part of Speech, Punctuation, Sentiment Analysis, Empath, TF-IDF Emoticon features| | 
+1901.02257|3aa7173612995223a904cc0f8eef4ff203cbb860|What baseline models do they compare against?|SLQA, Rusalka, HMA Model (single), TriAN (single), jiangnan (ensemble), MITRE (ensemble), TriAN (ensemble), HMA Model (ensemble)| | 
+2002.02492|6f2f304ef292d8bcd521936f93afeec917cbe28a|How much improvement is gained from the proposed approaches?|It eliminates non-termination in some models fixing for some models up to 6% of non-termination ratio.| | 
+1910.08210|37e8f5851133a748c4e3e0beeef0d83883117a98|How better is performance of proposed model compared to baselines?|Proposed model achive 66+-22 win rate, baseline CNN 13+-1  and baseline FiLM 32+-3 .| | 
+1911.02711|68e3f3908687505cb63b538e521756390c321a1c|What is the performance difference of using a generated summary vs. a user-written one?|2.7 accuracy points| | 
+1912.06670|5fa464a158dc8abf7cef8ca7d42a7080670c1edd|Is audio data per language balanced in dataset?|No| | 
+1906.03538|281cd4e78b27a62713ec43249df5000812522a89|What is the average length of the claims?|Average claim length is 8.9 tokens.| | 
+1803.09230|9776156fc93daa36f4613df591e2b49827d25ad2|By how much, the proposed method improves BiDAF and DCN on SQuAD dataset?|In terms of F1 score, the Hybrid approach improved by 23.47% and 1.39% on BiDAF and DCN respectively. The DCA approach improved by 23.2% and 1.12% on BiDAF and DCN respectively.| | 
+2003.05377|6b91fe29175be8cd8f22abf27fb3460e43b9889a|what genres do they songs fall under?|Gospel, Sertanejo, MPB, Forró, Pagode, Rock, Samba, Pop, Axé, Funk-carioca, Infantil, Velha-guarda, Bossa-nova and Jovem-guarda| | 
+2001.05467|4b8a0e99bf3f2f6c80c57c0e474c47a5ee842b2c|To what other competitive baselines is this approach compared?|LSTMs with and without attention, HRED, VHRED with and without attention, MMI and Reranking-RL| | 
+2001.05467|5e9732ff8595b31f81740082333b241d0a5f7c9a|How much better were results of the proposed models than base LSTM-RNN model?|on diversity 6.87 and on relevance 4.6 points higher| | 
+1909.09484|c165ea43256d7ee1b1fb6f5c0c8af5f7b585e60d|How much is proposed model better than baselines in performed experiments?|"most of the models have similar performance on BPRA: DSTC2 (+0.0015), Maluuba (+0.0729)
+GDP achieves the best performance in APRA: DSTC2 (+0.2893), Maluuba (+0.2896)
+GDP significantly outperforms the baselines on BLEU: DSTC2 (+0.0791), Maluuba (+0.0492)"| | 
+1807.07961|4a8bceb3b6d45f14c4749115d6aa83912f0b0a6e|Do they evaluate only on English datasets?|Yes| | 
+1709.05413|b8cee4782e05afaeb9647efdb8858554490feba5|Do they evaluate only on English datasets?|Yes| | 
+1804.00079|e2f269997f5a01949733c2ec8169f126dabd7571|Which data sources do they use?|"- En-Fr (WMT14)
+- En-De (WMT15)
+- Skipthought (BookCorpus)
+- AllNLI (SNLI + MultiNLI)
+- Parsing (PTB + 1-billion word)"| | 
+2003.12738|c69f4df4943a2ca4c10933683a02b179a5e76f64|What approach performs better in experiments global latent or sequence of fine-grained latent variables?|"PPL: SVT
+Diversity: GVT
+Embeddings Similarity: SVT
+Human Evaluation: SVT"| | 
+1909.03544|7772cb23b7609f1d4cfd6511ac3fcdc20f8481ba|What previous approaches did this method outperform?|Table TABREF44, Table TABREF44, Table TABREF47, Table TABREF47| | 
+1811.01088|6992f8e5a33f0af0f2206769484c72fecc14700b|Is the new model evaluated on the tasks that BERT and ELMo are evaluated on?|Yes| | 
+1902.10525|097ab15f58cb1fce5b5ffb5082b8d7bbee720659|Which language has the lowest error rate reduction?|thai| | 
+2004.01878|5a23f436a7e0c33e4842425cf86d5fd8ba78ac92|How big is dataset used?|553,451 documents| | 
+1603.00968|085147cd32153d46dd9901ab0f9195bfdbff6a85|What are the baseline models?|"MC-CNN
+MVCNN
+CNN"| | 
+1603.00968|c0035fb1c2b3de15146a7ce186ccd2e366fb4da2|By how much of MGNC-CNN out perform the baselines?|"In terms of Subj the Average MGNC-CNN is better than the average score of baselines by 0.5.  Similarly, Scores of SST-1, SST-2, and TREC where MGNC-CNN has similar improvements. 
+In case of Irony the difference is about 2.0. 
+"| | 
+1603.00968|34dd0ee1374a3afd16cf8b0c803f4ef4c6fec8ac|What are the comparable alternative architectures?|standard CNN, C-CNN, MVCNN | | 
+2004.01980|53377f1c5eda961e438424d71d16150e669f7072|Which state-of-the-art model is surpassed by 9.68% attraction score?|pure summarization model NHG| | 
+2004.01980|f37ed011e7eb259360170de027c1e8557371f002|What is increase in percentage of humor contained in headlines generated with TitleStylist method (w.r.t. baselines)?|"Humor in headlines (TitleStylist vs Multitask baseline):
+Relevance: +6.53% (5.87 vs 5.51)
+Attraction: +3.72% (8.93 vs 8.61)
+Fluency: 1,98% (9.29 vs 9.11)"| | 
+1804.08139|0fd678d24c86122b9ab27b73ef20216bbd9847d1|What evaluation metrics are used?|Accuracy on each dataset and the average accuracy on all datasets.| | 
+1911.03597|b9c0049a7a5639c33efdb6178c2594b8efdefabb|How much better are results of proposed model compared to pivoting method?|our method outperforms the baseline in both relevance and fluency significantly.| | 
+1909.07734|d2fbf34cf4b5b1fd82394124728b03003884409c|Who was the top-scoring team?|IDEA| | 
+2001.05970|dd5c9a370652f6550b4fd13e2ac317eaf90973a8|How strong is the correlation between the prevalence of the #MeToo movement and official reports [of sexual harassment]?|0.9098 correlation| | 
+1710.06700|2fa0b9d0cb26e1be8eae7e782ada6820bc2c037f|What were their accuracy results on the task?|97.32%| | 
+1912.10435|707db46938d16647bf4b6407b2da84b5c7ab4a81|How much F1 was improved after adding skip connections?|"Simple Skip improves F1 from 74.34 to 74.81
+Transformer Skip improes F1 from 74.34 to 74.95 "| | 
+1603.04513|d8de12f5eff64d0e9c9e88f6ebdabc4cdf042c22|How much gain does the model achieve with pretraining MVCNN?|0.8 points on Binary; 0.7 points on Fine-Grained; 0.6 points on Senti140; 0.7 points on Subj| | 
+1603.04513|9cba2ee1f8e1560e48b3099d0d8cf6c854ddea2e|What are the effects of extracting features of multigranular phrases?|The system benefits from filters of each size., features of multigranular phrases are extracted with variable-size convolution filters.| | 
+1603.04513|7975c3e1f61344e3da3b38bb12e1ac6dcb153a18|What are the effects of diverse versions of pertained word embeddings? |each embedding version is crucial for good performance| | 
+1607.06025|ea6764a362bac95fb99969e9f8c773a61afd8f39|What is the highest accuracy score achieved?|82.0%| | 
+1909.00252|2815bac42db32d8f988b380fed997af31601f129|What is improvement in accuracy for short Jokes in relation other types of jokes?|It had the highest accuracy comparing to all datasets 0.986% and It had the highest improvement comparing to previous methods on the same dataset by 8%| | 
+1808.09920|63403ffc0232ff041f3da8fa6c30827cfd6404b7|What is the metric used with WIKIHOP?|Accuracy| | 
+1808.09920|a25c1883f0a99d2b6471fed48c5121baccbbae82|What performance does the Entity-GCN get on WIKIHOP?|During testing: 67.6 for single model without coreference, 66.4 for single model with coreference, 71.2 for ensemble of 5 models| | 
+2002.08899|79ed71a3505cf6f5e8bf121fd7ec1518cab55cae|How do they damage different neural modules?|Damage to neural modules is done by randomly initializing their weights, causing the loss of all learned information.| | 
+1705.00108|a5b67470a1c4779877f0d8b7724879bbb0a3b313|what metrics are used in evaluation?|micro-averaged F1| | 
+1705.00108|4640793d82aa7db30ad7b88c0bf0a1030e636558|what previous systems were compared to?|Chiu and Nichols (2016), Lample et al. (2016), Ma and Hovy (2016), Yang et al. (2017), Hashimoto et al. (2016), Søgaard and Goldberg (2016) | | 
+1712.03547|a4d8fdcaa8adf99bdd1d7224f1a85c610659a9d3|"When they say ""comparable performance"", how much of a performance drop do these new embeddings result in?"|Performance was comparable, with the proposed method quite close and sometimes exceeding performance of baseline method.| | 
+1910.02339|9c4a4dfa7b0b977173e76e2d2f08fa984af86f0e|How does TP-N2F compare to LSTM-based Seq2Seq in terms of training and inference speed?|"Full Testing Set accuracy: 84.02
+Cleaned Testing Set accuracy: 93.48"| | 
+1910.02339|4c7ac51a66c15593082e248451e8f6896e476ffb|What is the performance proposed model achieved on AlgoList benchmark?|"Full Testing Set Accuracy: 84.02
+Cleaned Testing Set Accuracy: 93.48"| | 
+1910.02339|05671d068679be259493df638d27c106e7dd36d0|What is the performance proposed model achieved on MathQA?|"Operation accuracy: 71.89
+Execution accuracy: 55.95"| | 
+2003.06044|a3a871ca2417b2ada9df1438d282c45e4b4ad668|How do previous methods perform on the Switchboard Dialogue Act and DailyDialog datasets?|Table TABREF20 , Table TABREF22, Table TABREF23| | 
+2003.06044|0fcac64544842dd06d14151df8c72fc6de5d695c|What previous methods is the proposed method compared against?|"BLSTM+Attention+BLSTM
+Hierarchical BLSTM-CRF
+CRF-ASN
+Hierarchical CNN (window 4)
+mLSTM-RNN
+DRLM-Conditional
+LSTM-Softmax
+RCNN
+CNN
+CRF
+LSTM
+BERT"| | 
+2002.01359|b43fa27270eeba3e80ff2a03754628b5459875d6|What domains are present in the data?|Alarm, Banks, Buses, Calendar, Events, Flights, Homes, Hotels, Media, Messaging, Movies, Music, Payment, Rental Cars, Restaurants, Ride Sharing, Services, Train, Travel, Weather| | 
+1612.05270|458dbf217218fcab9153e33045aac08a2c8a38c6|How many texts/datapoints are in the SemEval, TASS and SENTIPOLC datasets?|"Total number of annotated data:
+Semeval'15: 10712
+Semeval'16: 28632
+Tass'15: 69000
+Sentipol'14: 6428"| | 
+1612.05270|cebf3e07057339047326cb2f8863ee633a62f49f|In which languages did the approach outperform the reported results?|Arabic, German, Portuguese, Russian, Swedish| | 
+1910.08987|f1831b2e96ff8ef65b8fde8b4c2ee3e04b7ac4bf|How close do clusters match to ground truth tone categories?|"NMI between cluster assignments and ground truth tones for all sylables is:
+Mandarin: 0.641
+Cantonese: 0.464"| | 
+1701.09123|20ec88c45c1d633adfd7bff7bbf3336d01fb6f37|what are the evaluation metrics?|Precision, Recall, F1| | 
+1701.09123|a4fe5d182ddee24e5bbf222d6d6996b3925060c8|which datasets were used in evaluation?|CoNLL 2003, GermEval 2014, CoNLL 2002, Egunkaria, MUC7, Wikigold, MEANTIME, SONAR-1, Ancora 2.0| | 
+1611.00514|30803eefd7cdeb721f47c9ca72a5b1d750b8e03b|How well does their system perform on the development set of SRE?|EER 16.04, Cmindet 0.6012, Cdet 0.6107| | 
+1704.08960|25e4dbc7e211a1ebe02ee8dff675b846fb18fdc5|What external sources are used?|Raw data from Gigaword, Automatically segmented text from Gigaword, Heterogenous training data from People's Daily, POS data from People's Daily| | 
+2002.05058|75b69eef4a38ec16df63d60be9708a3c44a79c56|How much better peformance is achieved in human evaluation when model is trained considering proposed metric?|"Pearson correlation to human judgement - proposed vs next best metric
+Sample level comparison:
+- Story generation: 0.387 vs 0.148
+- Dialogue: 0.472 vs 0.341
+Model level comparison:
+- Story generation:  0.631 vs 0.302
+- Dialogue: 0.783 vs 0.553"| | 
+2002.06675|8a5254ca726a2914214a4c0b6b42811a007ecfc6|How much transcribed data is available for for Ainu language?|Transcribed data is available for duration of 38h 54m 38s for 8 speakers.| | 
+1909.08041|13d92cbc2c77134626e26166c64ca5c00aec0bf5|What baseline approaches do they compare against?|"HotspotQA: Yang, Ding, Muppet
+Fever: Hanselowski, Yoneda, Nie"| | 
+1909.08041|ac54a9c30c968e5225978a37032158a6ffd4ddb8|Retrieval at what level performs better, sentence level or paragraph level?|This seems to indicate that the downstream QA module relies more on the upstream paragraph-level retrieval whereas the verification module relies more on the upstream sentence-level retrieval.| | 
+1909.09270|a7510ec34eaec2c7ac2869962b69cc41031221e5|What was their F1 score on the Bengali NER corpus?|52.0%| | 
+1903.00172|1fb73176394ef59adfaa8fc7827395525f9a5af7|Where did they get training data?|AmazonQA and ConciergeQA datasets| | 
+1903.00172|d70ba6053e245ee4179c26a5dabcad37561c6af0|Which datasets did they experiment on?|ConciergeQA and AmazonQA| | 
+1705.08142|a1c5b95e407127c6bb2f9a19b7d9b1f1bcd4a7a5|Do sluice networks outperform non-transfer learning approaches?|Yes| | 
+1704.05907|bde6fa2057fa21b38a91eeb2bb6a3ae7fb3a2c62|what state of the accuracy did they obtain?|51.5| | 
+2001.08051|9ebb2adf92a0f8db99efddcade02a20a219ca7d9|How is the proficiency score calculated?|They used 6 indicators for proficiency (same for written and spoken) each marked by bad, medium or good by one expert.| | 
+2001.08051|973f6284664675654cc9881745880a0e88f3280e|What proficiency indicators are used to the score the utterances?|"6 indicators:
+- lexical richness
+- pronunciation and fluency
+- syntactical correctness
+- fulfillment of delivery
+- coherence and cohesion
+- communicative, descriptive, narrative skills"| | 
+2001.08051|0a3a8d1b0cbac559f7de845d845ebbfefb91135e|What accuracy is achieved by the speech recognition system?|Accuracy not available: WER results are reported 42.6 German, 35.9 English| | 
+2001.08051|ec2b8c43f14227cf74f9b49573cceb137dd336e7|How is the speech recognition system evaluated?|Speech recognition system is evaluated using WER metric.| | 
+2001.08051|5e5460ea955d8bce89526647dd7c4f19b173ab34|How many of the utterances are transcribed?|Total number of transcribed utterances including Train and Test for both Eng and Ger language is 5562 (2188 cleaned)| | 
+2001.08051|d7d611f622552142723e064f330d071f985e805c|How many utterances are in the corpus?|Total number of utterances available is: 70607 (37344 ENG + 33263 GER)| | 
+1611.03382|9555aa8de322396a16a07a5423e6a79dcd76816a|By how much does their model outperform both the state-of-the-art systems?|w.r.t Rouge-1 their model outperforms by 0.98% and w.r.t Rouge-L their model outperforms by 0.45%| | 
+1909.06937|fa3312ae4bbed11a5bebd77caf15d651962e0b26|What was the performance on the self-collected corpus?|F1 scores of 86.16 on slot filling and 94.56 on intent detection| | 
+1909.06937|26c290584c97e22b25035f5458625944db181552|What is the size of their dataset?|10,001 utterances| | 
+1704.00939|e2e31ab279d3092418159dfd24760f0f0566e9d3|What was their performance?|beneficial impact of word-representations and basic pre-processing| | 
+1707.08559|1a8b7d3d126935c09306cacca7ddb4b953ef68ab|What were their results?|Best model achieved F-score 74.7 on NALCS and F-score of 70.0 on LMS on test set| | 
+1912.10806|2e1ededb7c8460169cf3c38e6cde6de402c1e720|What is the prediction accuracy of the model?|"mean prediction accuracy 0.99582651
+S&P 500 Accuracy 0.99582651"| | 
+1902.09393|af75ad21dda25ec72311c2be4589efed9df2f482|How much does this system outperform prior work?|The system outperforms by 27.7% the LSTM model, 38.5% the RL-SPINN model and 41.6% the Gumbel Tree-LSTM| | 
+1902.09393|de12e059088e4800d7d89e4214a3997994dbc0d9|What are the baseline systems that are compared against?|The system is compared to baseline models: LSTM, RL-SPINN and Gumbel Tree-LSTM| | 
+1909.13695|52e8f79814736fea96fd9b642881b476243e1698|What systems are tested?|"BULATS i-vector/PLDA
+BULATS x-vector/PLDA
+VoxCeleb x-vector/PLDA
+PLDA adaptation (X1)
+ Extractor fine-tuning (X2) "| | 
+1909.11467|3d6015d722de6e6297ba7bfe7cb0f8a67f660636|What are the 12 categories devised?|Economics, Genocide, Geography, History, Human Rights, Kurdish, Kurdology, Philosophy, Physics, Theology, Sociology, Social Study| | 
+1909.00361|3fb4334e5a4702acd44bd24eb1831bb7e9b98d31|How big are the datasets used?|"Evaluation datasets used:
+CMRC 2018 - 18939 questions, 10 answers
+DRCD - 33953 questions, 5 answers
+NIST MT02/03/04/05/06/08 Chinese-English - Not specified
+
+Source language train data:
+SQuAD - Not specified"| | 
+1908.11546|8a0a51382d186e8d92bf7e78277a1d48958758da|How better is gCAS approach compared to other approaches?|For entity  F1 in the movie, taxi and restaurant domain it results in scores of 50.86, 64, and 60.35. For success, it results it outperforms in the movie and restaurant domain with scores of 77.95 and 71.52| | 
+1905.07464|4a4616e1a9807f32cca9b92ab05e65b05c2a1bf5|What were the sizes of the test sets?|Test set 1 contained 57 drug labels and 8208 sentences and test set 2 contained 66 drug labels and 4224 sentences| | 
+1901.09755|93b299acfb6fad104b9ebf4d0585d42de4047051|Which datasets are used?|"ABSA SemEval 2014-2016 datasets
+Yelp Academic Dataset
+Wikipedia dumps"| | 
+2002.05829|02417455c05f09d89c2658f39705ac1df1daa0cd|How much does it minimally cost to fine-tune some model according to benchmarking framework?|$1,728| | 
+2002.05829|6ce057d3b88addf97a30cb188795806239491154|What models are included in baseline benchmarking results?|BERT, XLNET RoBERTa, ALBERT, DistilBERT| | 
+1912.00864|572458399a45fd392c3a4e07ce26dcff2ad5a07d|How much more accurate is the model than the baseline?|For the Oshiete-goo dataset, the NAGM model's ROUGE-L score is higher than the highest performing conventional model, Trans, by 0.021, and its BLEU-4 score is higher than the highest performing model CLSTM by 0.037.  For the nfL6 dataset, the NAGM model's ROUGE-L score is higher than the highest performing conventional model, CLSTM, by 0.028, and its BLEU-4 score is higher than the highest performing model CLSTM by 0.040. Human evaluation of the NAGM's generated outputs for the Oshiete-goo dataset had 47% ratings of (1), the highest rating, while CLSTM only received 21% ratings of (1). For the nfL6 dataset, the comparison of (1)'s was NAGM's 50% to CLSTM's 30%. | | 
+1910.11204|33d864153822bd378a98a732ace720e2c06a6bc6|What is new state-of-the-art performance on CoNLL-2009 dataset?|In closed setting 84.22 F1 and in open 87.35 F1.| | 
+1910.11204|bab8c69e183bae6e30fc362009db9b46e720225e|What are two strong baseline methods authors refer to?|Marcheggiani and Titov (2017) and Cai et al. (2018)| | 
+1810.03459|1adbdb5f08d67d8b05328ccc86d297ac01bf076c|What languages do they use?|Train languages are: Cantonese, Bengali, Pashto, Turkish, Vietnamese, Haitian, Tamil, Kurdish, Tokpisin and Georgian, while Assamese, Tagalog, Swahili, Lao are used as target languages.| | 
+2002.10361|38c74ab8292a94fc5a82999400ee9c06be19f791|How large is the corpus?|It contains 106,350 documents| | 
+2002.10361|16af38f7c4774637cf8e04d4b239d6d72f0b0a3a|How large is the dataset?|over 104k documents| | 
+1810.10254|657edbf39c500b2446edb9cca18de2912c628b7d|What was their perplexity score?|Perplexity score 142.84 on dev and 138.91 on test| | 
+1703.06492|0c7823b27326b3f5dff51f32f45fc69c91a4e06d|In which setting they achieve the state of the art?|in open-ended task esp. for counting-type questions | | 
+1909.01958|384d571e4017628ebb72f3debb2846efaf0cb0cb|On what dataset is Aristo system trained?|"Aristo Corpus
+Regents 4th
+Regents 8th
+Regents `12th
+ARC-Easy
+ARC-challenge "| | 
+1806.07711|0c09a0e8f9c5bdb678563be49f912ab6e3f97619|How many roles are proposed?|12| | 
+1912.03457|50716cc7f589b9b9f3aca806214228b063e9695b|What language technologies have been introduced in the past?|"- Font & Keyboard
+- Speech-to-Text
+- Text-to-Speech
+- Text Prediction
+- Spell Checker
+- Grammar Checker
+- Text Search
+- Machine Translation
+- Voice to Text Search
+- Voice to Speech Search"| | 
+1901.05280|73bbe0b6457423f08d9297a0951381098bd89a2b|what were the baselines?|"2008 Punyakanok et al. 
+2009 Zhao et al. + ME 
+2008 Toutanova et al. 
+2010 Bjorkelund et al.  
+2015 FitzGerald et al. 
+2015 Zhou and Xu 
+2016 Roth and Lapata 
+2017 He et al. 
+2017 Marcheggiani et al.
+2017 Marcheggiani and Titov 
+2018 Tan et al. 
+2018 He et al. 
+2018 Strubell et al. 
+2018 Cai et al. 
+2018 He et al. 
+2018 Li et al. 
+"| | 
+1909.11297|e292676c8c75dd3711efd0e008423c11077938b1|Which soft-selection approaches are evaluated?|LSTM and BERT | | 
+1911.01680|2d47cdf2c1e0c64c73518aead1b94e0ee594b7a5|How big is slot filing dataset?|Dataset has 1737 train, 497 dev and 559 test sentences.| | 
+1809.08298|dafa760e1466e9eaa73ad8cb39b229abd5babbda|How large is the dataset they generate?|4.756 million sentences| | 
+1805.04033|bd99aba3309da96e96eab3e0f4c4c8c70b51980a|Which existing models does this approach outperform?|RNN-context, SRB, CopyNet, RNN-distract, DRGD| | 
+1910.06748|8ad815b29cc32c1861b77de938c7269c9259a064|What languages are represented in the dataset?|EN, JA, ES, AR, PT, KO, TH, FR, TR, RU, IT, DE, PL, NL, EL, SV, FA, VI, FI, CS, UK, HI, DA, HU, NO, RO, SR, LV, BG, UR, TA, MR, BN, IN, KN, ET, SL, GU, CY, ZH, CKB, IS, LT, ML, SI, IW, NE, KM, MY, TL, KA, BO| | 
+1911.08673|9aa52b898d029af615b95b18b79078e9bed3d766|How faster is training and decoding compared to former models?|"Proposed vs best baseline:
+Decoding: 8541 vs 8532 tokens/sec
+Training: 8h vs 8h"| | 
+1611.04642|b13d0e463d5eb6028cdaa0c36ac7de3b76b5e933|What datasets are used to evaluate the model?|WN18 and FB15k| | 
+1909.03242|e9ccc74b1f1b172224cf9f01e66b1fa9e34d2593|What metadata is included?|besides claim, label and claim url, it also includes a claim ID, reason, category, speaker, checker, tags, claim entities, article title, publish data and claim date| | 
+1905.12260|e8029ec69b0b273954b4249873a5070c2a0edb8a|How much important is the visual grounding in the learning of the multilingual representations?|performance is significantly degraded without pixel data| | 
+1804.08050|5a9f94ae296dda06c8aec0fb389ce2f68940ea88|By how much does their method outperform the multi-head attention model?|Their average improvement in Character Error Rate over the best MHA model was 0.33 percent points.| | 
+1804.08050|85912b87b16b45cde79039447a70bd1f6f1f8361|How large is the corpus they use?|449050| | 
+2002.06424|58f50397a075f128b45c6b824edb7a955ee8cba1|How many shared layers are in the system?|1| | 
+2002.06424|9adcc8c4a10fa0d58f235b740d8d495ee622d596|How many additional task-specific layers are introduced?|2 for the ADE dataset and 3 for the CoNLL04 dataset| | 
+1909.05246|8568c82078495ab421ecbae38ddd692c867eac09|How many layers of self-attention does the model have?|1, 4, 8, 16, 32, 64| | 
+1606.04631|b3fcab006a9e51a0178a1f64d1d084a895bd8d5c|what are the state of the art methods?|S2VT, RGB (VGG), RGB (VGG)+Flow (AlexNet), LSTM-E (VGG), LSTM-E (C3D) and Yao et al.| | 
+2003.07996|6baf5d7739758bdd79326ce8f50731c785029802|Which four languages do they experiment with?|German, English, Italian, Chinese| | 
+1910.10288|5c4c8e91d28935e1655a582568cc9d94149da2b2|Does DCA or GMM-based attention perform better in experiments?|About the same performance| | 
+1908.06083|3f326c003be29c8eac76b24d6bba9608c75aa7ea|What evaluation metric is used?|F1 and Weighted-F1| | 
+1910.12129|14e259a312e653f8fc0d52ca5325b43c3bdfb968|Is any data-to-text generation model trained on this new corpus, what are the results?|Yes, Transformer based seq2seq is evaluated with average BLEU 0.519, METEOR 0.388, ROUGE 0.631 CIDEr 2.531 and SER 2.55%.| | 
+1911.02821|34fab25d9ceb9c5942daf4ebdab6c5dd4ff9d3db|What dataset did they use?|weibo-100k, Ontonotes, LCQMC and XNLI| | 
+1906.10551|863d5c6305e5bb4b14882b85b6216fa11bcbf053|What are the 12 AV approaches which are examined?|MOCC, OCCAV, COAV, AVeer, GLAD, DistAV, Unmasking, Caravel, GenIM, ImpGI, SPATIUM and NNCD| | 
+1808.03430|01edeca7b902ae3fd66264366bf548acea1db364|What are the results achieved from the introduced method?|Their model resulted in values of 0.476, 0.672 and 0.893 for recall at position 1,2 and 5 respectively in 10 candidates.| | 
+1911.05153|234ccc1afcae4890e618ff2a7b06fc1e513ea640|How big is performance improvement proposed methods are used?|"Data augmentation (es)  improved Adv es by 20% comparing to baseline 
+Data augmentation (cs) improved Adv cs by 16.5% comparing to baseline
+Data augmentation (cs+es) improved both Adv cs and Adv es by at least 10% comparing to baseline 
+All models show improvements over adversarial sets  
+"| | 
+1811.02906|4704cbb35762d0172f5ac6c26b67550921567a65|By how much does transfer learning improve performance on this task?|In task 1 best transfer learning strategy improves F1 score by 4.4% and accuracy score by 3.3%, in task 2 best transfer learning strategy improves F1 score by 2.9% and accuracy score by 1.7%| | 
+1903.09588|e9d9bb87a5c4faa965ceddd98d8b80d4b99e339e|How much do they outperform previous state-of-the-art?|"On subtask 3 best proposed model has F1 score of 92.18 compared to best previous F1 score of 88.58.
+On subtask 4 best proposed model has 85.9, 89.9 and 95.6 compared to best previous results of 82.9, 84.0 and 89.9 on 4-way, 3-way and binary aspect polarity."| | 
+1904.01608|9349acbfce95cb5d6b4d09ac626b55a9cb90e55e|What are the citation intent labels in the datasets?|Background, extends, uses, motivation, compare/contrast, and future work for the ACL-ARC dataset. Background, method, result comparison for the SciCite dataset.| | 
+1911.13066|160e6d2fc6e04bb0b4ee8d59c06715355dec4a17|What accuracy score do they obtain?|the best performing model obtained an accuracy of 0.86| | 
+1911.13066|30dad5d9b4a03e56fa31f932c879aa56e11ed15b|What is the 12 class bilingual text?|Appreciation, Satisfied, Peripheral complaint, Demanded inquiry, Corruption, Lagged response, Unresponsive, Medicine payment, Adverse behavior, Grievance ascribed and Obnoxious/irrelevant| | 
+1910.13215|98eb245c727c0bd050d7686d133fa7cd9d25a0fb|Was evaluation metrics and criteria were used to evaluate the output of the cascaded multimodal speech translation?|BLEU scores| | 
+1909.05855|6dcbe941a3b0d5193f950acbdc574f1cfb007845|What are the domains covered in the dataset?|"Alarm
+Bank
+Bus
+Calendar
+Event
+Flight
+Home
+Hotel
+Media
+Movie
+Music
+RentalCar
+Restaurant
+RideShare
+Service
+Travel
+Weather"| | 
+1703.02507|37eba8c3cfe23778498d95a7dfddf8dfb725f8e2|Which other unsupervised models are used for comparison?|Sequential (Denoising) Autoencoder, TF-IDF BOW, SkipThought, FastSent, Siamese C-BOW, C-BOW, C-PHRASE, ParagraphVector| | 
+1710.09340|11dde2be9a69a025f2fc29ce647201fb5a4df580|By how much does the new parser outperform the current state-of-the-art?|Proposed method achieves 94.5 UAS and 92.4 LAS  compared to 94.3 and 92.2 of best state-of-the -art greedy based parser. Best state-of-the art parser overall achieves 95.8 UAS and 94.6 LAS.| | 
+1906.05474|b540cd4fe9dc4394f64d5b76b0eaa4d9e30fb728|Could you tell me more about the metrics used for performance evaluation?|BLUE utilizes different metrics for each of the tasks: Pearson correlation coefficient, F-1 scores, micro-averaging, and accuracy| | 
+1906.05474|41173179efa6186eef17c96f7cbd8acb29105b0e|which tasks are used in BLUE benchmark?|"Inference task
+The aim of the inference task is to predict whether the premise sentence entails or contradicts the hypothesis sentence, Document multilabel classification
+The multilabel classification task predicts multiple labels from the texts., Relation extraction
+The aim of the relation extraction task is to predict relations and their types between the two entities mentioned in the sentences., Named entity recognition
+The aim of the named entity recognition task is to predict mention spans given in the text , Sentence similarity
+The sentence similarity task is to predict similarity scores based on sentence pairs"| | 
+1906.11180|a996b6aee9be88a3db3f4127f9f77a18ed10caba|What's the precision of the system?|0.8320 on semantic typing, 0.7194 on entity matching| | 
+1908.06379|a6665074b067abb2676d5464f36b2cb07f6919d3|What are the performances obtained for PTB and CTB?|. On PTB, our model achieves 93.90 F1 score of constituent parsing and 95.91 UAS and 93.86 LAS of dependency parsing., On CTB, our model achieves a new state-of-the-art result on both constituent and dependency parsing.| | 
+1908.11365|3288a50701a80303fd71c8c5ede81cbee14fa2c7|Is the proposed layer smaller in parameters than a Transformer?|No| | 
+1708.09609|ce807a42370bfca10fa322d6fa772e4a58a8dca1|What are the four forums the data comes from?|Darkode,  Hack Forums, Blackhat and Nulled.| | 
+1911.11951|79620a2b4b121b6d3edd0f7b1d4a8cc7ada0b516|What are the state-of-the-art models for the task?|To the best of our knowledge, our method achieves state-of-the-art results in weighted-accuracy and standard accuracy on the dataset| | 
+2004.03788|1cbca15405632a2e9d0a7061855642d661e3b3a7|How much improvement do they get?|Their GTRS approach got an improvement of 3.89% compared to SVM and 27.91% compared to Pawlak.| | 
+1910.10869|c54de73b36ab86534d18a295f3711591ce9e1784|Is this approach compared to some baseline?|No| | 
+1911.08962|a379c380ac9f67f824506951444c873713405eed|What are the baselines?|CNN, LSTM, BERT| | 
+1810.12885|a516b37ad9d977cb9d4da3897f942c1c494405fe|Which models do they try out?|DocQA, SAN, QANet, ASReader, LM, Random Guess| | 
+1911.02086|7f5ab9a53aef7ea1a1c2221967057ee71abb27cb|Do they compare executionttime of their model against other models?|No| | 
+1810.02100|c38a48d65bb21c314194090d0cc3f1a45c549dd6|Which English domains do they evaluate on?|Conll, Weblogs, Newsgroups, Reviews, Answers| | 
+1910.11235|12ac76b77f22ed3bcb6430bcd0b909441d79751b|What are the competing models?|TEACHER FORCING (TF), SCHEDULED SAMPLING (SS),  SEQGAN, RANKGAN, LEAKGAN.| | 
+1909.01247|0d7de323fd191a793858386d7eb8692cc924b432|What writing styles are present in the corpus?|current news, historical news, free time, sports, juridical news pieces, personal adverts, editorials.| | 
+1908.06151|f9c5799091e7e35a8133eee4d95004e1b35aea00|What experiment result led to conclussion that reducing the number of layers of the decoder does not matter much?|Exp. 5.1| | 
+1908.06151|04012650a45d56c0013cf45fd9792f43916eaf83|How much is performance hurt when using too small amount of layers in encoder?|comparing to the results from reducing the number of layers in the decoder, the BLEU score was 69.93 which is less than 1% in case of test2016 and in case of test2017 it was less by 0.2 %. In terms of TER it had higher score by 0.7 in case of test2016 and 0.1 in case of test2017. | | 
+1901.03866|efe49829725cfe54de01405c76149a4fe4d18747|How much does HAS-QA improve over baselines?|For example, in QuasarT, it improves 16.8% in EM score and 20.4% in F1 score. , For example, in QuasarT, it improves 4.6% in EM score and 3.5% in F1 score.| | 
+1606.00189|a49832c89a2d7f95c1fe6132902d74e4e7a3f2d0|Which dataset do they evaluate grammatical error correction on?|CoNLL 2014| | 
+1605.07683|a02696d4ab728ddd591f84a352df9375faf7d1b4|How large is the Dialog State Tracking Dataset?|1,618 training dialogs, 500 validation dialogs, and 1,117 test dialogs| | 
+1711.00106|1f63ccc379f01ecdccaa02ed0912970610c84b72|How much is the gap between using the proposed objective and using only cross-entropy objective?|The mixed objective improves EM by 2.5% and F1 by 2.2%| | 
+1911.08976|dac2591f19f5bbac3d4a7fa038ff7aa09f6f0d96|what are the three methods presented in the paper?|Optimized TF-IDF, iterated TF-IDF, BERT re-ranking.| | 
+1812.01704|f62c78be58983ef1d77049738785ec7ab9f2a3ee|what datasets did the authors use?|"Kaggle
+Subversive Kaggle
+Wikipedia
+Subversive Wikipedia
+Reddit
+Subversive Reddit "| | 
+1712.03556|39a450ac15688199575798e72a2cc016ef4316b5|How much performance improvements they achieve on SQuAD?|Compared to baselines SAN (Table 1) shows  improvement of 1.096% on EM and 0.689% F1. Compared to other published SQuAD results (Table 2) SAN is ranked second. | | 

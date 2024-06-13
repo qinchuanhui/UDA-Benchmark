@@ -1,0 +1,13 @@
+langchain
+openai
+transformers
+pandas
+PyPDF2
+chromadb
+transformers
+sentence_transformers
+rank_bm25
+tqdm
+numpy
+datasets
+torch>=2.1.0
