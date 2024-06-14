@@ -45,54 +45,55 @@ def code_gen_process(DATASET, data):
 
 
 def call_f1_eval(dataset, answers, preds):
-    eval_module = importlib.import_module(f"eval.utils.{dataset}_eval")
-    res = eval_module.evaluate(answers, preds)
+    from uda.eval.utils.paper_eval import paper_evaluate
+    from uda.eval.utils.feta_eval import feta_evaluate
+    from uda.eval.utils.nq_eval import nq_evaluate
+
+    if dataset == "paper":
+        res = paper_evaluate(answers, preds)
+    elif dataset == "feta":
+        res = feta_evaluate(answers, preds)
+    elif dataset == "nq":
+        res = nq_evaluate(answers, preds)
+
     print(res)
 
 
 def call_finance_eval(dataset, data):
     if dataset == "tat":
-        from eval.utils.tat_eval import TaTQAEmAndF1 as EvalClass
+        from uda.eval.utils.tat_eval import TaTQAEmAndF1 as EvalClass
 
         em_and_f1 = EvalClass()
         for res in data:
             em_and_f1(res)
         global_em, global_f1, _, _ = em_and_f1.get_overall_metric()
-        print("Exact-match accuracy {0:.2f}".format(global_em * 100))
-        print("F1 score {0:.2f}".format(global_f1 * 100))
+        print("Numerical F1 score: {0:.2f}".format(global_f1 * 100))
     elif dataset == "fin":
-        from eval.utils.fin_eval import FinQAEm as EvalClass
+        from uda.eval.utils.fin_eval import FinQAEm as EvalClass
 
         em = EvalClass()
         for res in data:
             em(res)
         global_em = em.get_overall_metric()
-        print("Exact-match accuracy {0:.2f}".format(global_em * 100))
+        print("Exact-match accuracy: {0:.2f}".format(global_em * 100))
 
 
-CODE_GEN = True
-
-
-def eval_main(dataset_name, file_name):
+def eval_main(dataset_name, data_list, CODE_GEN=False):
 
     if dataset_name in ["paper_tab", "paper_text"]:
         DATASET = "paper"
     else:
         DATASET = dataset_name
 
-    with open(file_name, "r") as f:
-        data = f.readlines()
-        data = [json.loads(x) for x in data][:]
-
-    print("Total data: ", len(data))
+    # print("Total data: ", len(data_list))
     if DATASET in ["tat", "fin"]:
         if CODE_GEN:
-            data = code_gen_process(DATASET, data)
-        call_finance_eval(DATASET, data)
+            data_list = code_gen_process(DATASET, data_list)
+        call_finance_eval(DATASET, data_list)
     elif DATASET in ["paper", "feta", "nq"]:
         answers = {}
         preds = {}
-        for item in data:
+        for item in data_list:
             gts = item["answers"]
             if len(gts) == 0:
                 continue
@@ -103,6 +104,12 @@ def eval_main(dataset_name, file_name):
             answers[q_uid] = gts
             preds[q_uid] = {"answer": pred}
         call_f1_eval(DATASET, answers, preds)
+
+
+def eval_from_file(dataset_name, file_path, CODE_GEN=False):
+    with open(file_path, "r") as f:
+        data = [json.loads(line) for line in f]
+        eval_main(dataset_name, data, CODE_GEN)
 
 
 if __name__ == "__main__":

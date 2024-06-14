@@ -9,7 +9,7 @@ meta_data = {
     "fin": {
         "example_pdf_dir": "dataset/src_doc_files_example/fin_docs",
         "pdf_dir": "dataset/src_doc_files/fin_docs",
-        "bench_json_file": "dataset/extended_qa_info_bench/bench_feta_qa.json",
+        "bench_json_file": "dataset/extended_qa_info_bench/bench_fin_qa.json",
     },
     "tat": {
         "example_pdf_dir": "dataset/src_doc_files_example/tat_docs",
@@ -59,7 +59,7 @@ def get_pdf_path(dataset_name, doc_name):
 
 def _process_answer_enrtry(dataset_name, entry):
     if dataset_name == "fin":
-        answers = [entry["answer_1"], entry["answer_2"]]
+        answers = {"str_answer": entry["answer_1"], "exe_answer": entry["answer_2"]}
     elif dataset_name == "tat":
         raw_answer = entry["answer"]
         # in hf parquet, the answer is already a sequence
@@ -71,26 +71,29 @@ def _process_answer_enrtry(dataset_name, entry):
         answers = {
             "answer": answer,
             "answer_type": entry["answer_type"],
-            "answer_scale": entry["answer_scale"],
+            "scale": entry["answer_scale"],
         }
     elif dataset_name in ["paper_tab", "paper_text"]:
         answers = [entry["answer_1"], entry["answer_2"], entry["answer_3"]]
     elif dataset_name == "feta":
         answers = entry["answer"]
     elif dataset_name == "nq":
-        answers = [entry["short_answer"], entry["long_answer"]]
+        answers = {
+            "short_answer": entry["short_answer"],
+            "long_answer": entry["long_answer"],
+        }
     return answers
 
 
 def qa_df_to_dict(dataset_name, df):
     qas_dict = {}
     for item in df.iterrows():
-        doc_name = item[1]["doc_name"]
+        doc_name = str(item[1]["doc_name"])
         answers = _process_answer_enrtry(dataset_name, item[1])
         qa_dict = {
             "question": item[1]["question"],
             "answers": answers,
-            "q_uid": item[1]["q_uid"],
+            "q_uid": str(item[1]["q_uid"]),
         }
         if doc_name not in qas_dict:
             qas_dict[doc_name] = []

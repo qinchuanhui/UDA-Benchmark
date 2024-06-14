@@ -3,10 +3,10 @@ Official script for evaluating models built for the Qasper dataset. The script
 outputs Answer F1 and Evidence F1 reported in the paper.
 """
 
-from eval.utils.basic_utils import *
+from uda.eval.utils.basic_utils import *
 
 
-def evaluate(gold, predicted):
+def nq_evaluate(gold, predicted):
     max_answer_f1s = []
     num_missing_predictions = 0
     for question_id, references in gold.items():

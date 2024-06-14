@@ -11,3 +11,5 @@ tqdm
 numpy
 datasets
 torch>=2.1.0
+ipykernel
+ragatouille

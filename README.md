@@ -25,7 +25,8 @@ The demonstration encompasses several essential steps:
  * Prepare the question-answer-document triplet
  * Extract and segment the document content
  * Build indexes and retrieve data segments
- * Generate answering reponse with LLMs 
+ * Generate answering reponse with LLMs
+ * Evaluate the accuracy of reponses using the specific metric. 
 
 ## Dataset: UDA-QA 
 
@@ -78,9 +79,12 @@ Our UDA benchmark focuses on several pivotal items:
 ### Evaluation Metrics
 To evaluate the quality of LLM-generated answers, we apply widely accepted span-level F1-score in PaperTab, PaperText, FetaTab, and NqText datasets, where ground-truth answers are in natural language and the source datasets also utilize this metric. We treat the prediction and ground truth as bags of words and calculate the F1-score to measure their overlap (see [basic_eval](uda/eval/utils/basic_utils.py)). 
 
-In financial analysis, the assessment becomes more intricate due to numerical values. For the TatHybrid dataset, we adopt the numeracy-focused F1-score, which considers the scale and the plus-minus of numerical values (see [financial_eval](uda/eval/utils/finance_utils.py)). In the FinHybrid dataset, where answers are always numerical or binary, we rely on the Exact-Match metric but allow for a numerical tolerance of $1\%$, accounting for rounding discrepancies. 
+In financial analysis, the assessment becomes more intricate due to numerical values. For the TatHybrid dataset, we adopt the numeracy-focused F1-score, which considers the scale and the plus-minus of numerical values. In the FinHybrid dataset, where answers are always numerical or binary, we rely on the Exact-Match metric but allow for a numerical tolerance of 1%, accounting for rounding discrepancies. 
 
-For more details of our benchmark and experiments, please refer to the directory [exp](exp).
+
+### Resources
+For an in-depth exploration of our benchmark and experimental framework, please refer to the resources located in the [experiment](experiment) directory. We have curated a collection of user-friendly Jupyter notebooks, to facilitate replication of our benchmarking procedures. Additionally, more  details of implementing our functionalities are constructed and housed within the [uda](uda) directory.
+
 
 
 

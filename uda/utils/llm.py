@@ -70,9 +70,11 @@ def make_prompt(question, context, task_name, llm_type="gpt4"):
     return messages
 
 
-def make_prompt_code_gen(question, context, task_name, llm_model="gpt4"):
-    if task_name not in ["fin", "tat"]:
+def make_prompt_code(question, context, task_name, llm_type="gpt4"):
+    if task_name not in ["fin"]:
         raise ValueError(f"Invalid task name: {task_name}")
+    if "mixtral" in llm_type or "Mixtral" in llm_type or "mistral" in llm_type:
+        raise ValueError(f"llm_gen_experiment is not supported in Mistral")
     prompt_template = PROMPT_DICT["finance_code"]
     user_content = f" ### Context: {context}\n ### Question: {question}\n ### Response:"
     messages = [
@@ -86,22 +88,36 @@ def make_prompt_code_gen(question, context, task_name, llm_model="gpt4"):
     return messages
 
 
-def call_gpt(messages, deploy_version="yulong-4"):
+def make_prompt_basic(question, context, task_name, llm_type="gpt4"):
+    if task_name not in ["fin"]:
+        raise ValueError(f"Invalid task name: {task_name}")
+    if "mixtral" in llm_type or "Mixtral" in llm_type or "mistral" in llm_type:
+        raise ValueError(f"llm_gen_experiment is not supported in Mistral")
+    prompt_template = PROMPT_DICT["finance_base"]
+    user_content = f" ### Context: {context}\n ### Question: {question}\n ### Response:"
+    messages = [
+        {"role": "system", "content": prompt_template["system"]},
+        {"role": "user", "content": prompt_template["user_1"]},
+        {"role": "assistant", "content": prompt_template["assistant_1"]},
+        {"role": "user", "content": user_content},
+    ]
+    return messages
+
+
+def call_gpt(messages, api_key, endpoint, deployment_name):
     client = AzureOpenAI(
-        api_key="abcdefg",
-        api_version="2023-12-01-preview",
-        azure_endpoint="https://qinchuan-hui.openai.azure.com/",
+        api_key=api_key,
+        api_version="2024-04-01-preview",
+        azure_endpoint=endpoint,
     )
 
     try:
         response = client.chat.completions.create(
-            model=deploy_version,  # model = "deployment_name".
+            model=deployment_name,  # model = "deployment_name".
             messages=messages,
             temperature=0.1,
         )
         res = response.choices[0].message.content
-        # print(f"==================response=======================")
-        # print(res)
         return res
     except Exception as e:
         print(e)

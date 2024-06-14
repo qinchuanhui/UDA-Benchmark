@@ -1,7 +1,7 @@
-from eval.utils.basic_utils import *
+from uda.eval.utils.basic_utils import *
 
 
-def evaluate(gold, predicted):
+def feta_evaluate(gold, predicted):
     max_answer_f1s = []
     num_missing_predictions = 0
     for question_id in gold.keys():

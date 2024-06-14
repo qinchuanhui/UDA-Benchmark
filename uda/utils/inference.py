@@ -33,7 +33,7 @@ class LLM(object):
         )
 
         self.tokenizer = AutoTokenizer.from_pretrained(
-            model_name,
+            self.model_name,
             use_fast=True,
             trust_remote_code=True,
         )

@@ -1,5 +1,5 @@
 from typing import Set, Tuple, Union
-from eval.utils.finance_utils import *
+from uda.eval.utils.finance_utils import *
 import pandas as pd
 import numpy as np
 from scipy.optimize import linear_sum_assignment
@@ -307,9 +307,8 @@ class TaTQAEmAndF1(object):
                 exact_match = 0
                 f1_score = 0
             else:
-                print("Gold answer: ", gold_answer)
                 ground_truth_answer_strings = get_answer_str(gold_answer, gold_scale)
-                print("Ground truth strings: ", ground_truth_answer_strings)
+
                 prediction = (
                     prediction if isinstance(prediction, list) else [prediction]
                 )
