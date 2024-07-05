@@ -9,7 +9,7 @@ from ragatouille import RAGPretrainedModel
 import string
 import json
 import torch
-
+from uda.utils import access_config
 
 from rank_bm25 import BM25Okapi
 
@@ -59,7 +59,7 @@ def split_text(pdf_text, chunk_size=3000, chunk_overlap=300):
     return text_chunks
 
 
-def colbert_retrieve(index_path, query, top_k=30):
+def colbert_retrieve(index_path, query, top_k=5):
     RAG = RAGPretrainedModel.from_index(index_path)
     results = RAG.search(query, k=top_k)
     top_res = results[:top_k]
@@ -78,9 +78,9 @@ def store_chunks(chunks, db_name, model_name="all-mpnet-base-v2"):
     chroma_client = chromadb.Client()
     if model_name == "openai":
         ef = embedding_functions.OpenAIEmbeddingFunction(
-            api_key="abcdefg",
-            model_name="text-embedding-3-large",
-            api_base="https://abcdefg.openai.azure.com/",
+            api_key=access_config.EMBEDDING_API_KEY,
+            model_name=access_config.EMBEDDING_MODEL,
+            api_base=access_config.EMBEDDING_ENDPOINT,
             api_type="azure",
             api_version="2024-02-01",
         )
@@ -120,7 +120,7 @@ def prepare_collection(pdf_file_path, collection_name, model):
     return chunks_or_collection
 
 
-def get_contexts(chunks_or_collection, question, model, top_k=30):
+def get_contexts(chunks_or_collection, question, model, top_k=5):
     if model == "bm25":
         contexts = BM25_retrieval(chunks_or_collection, question, top_k)
     elif model == "colbert":
@@ -134,6 +134,13 @@ def get_contexts(chunks_or_collection, question, model, top_k=30):
 def reset_vdb(db_name):
     chroma_client = chromadb.Client()
     chroma_client.delete_collection(db_name)
+
+
+def reset_collection(collection_name, rt_model):
+    if rt_model == "bm25" or rt_model == "colbert":
+        return
+    else:
+        reset_vdb(collection_name)
 
 
 def normalize_answer(s):

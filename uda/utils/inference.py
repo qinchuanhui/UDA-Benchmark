@@ -6,7 +6,7 @@ import torch
 
 import grpc
 
-import json
+from uda.utils import access_config
 import time
 
 
@@ -29,12 +29,14 @@ class LLM(object):
             self.model_name,
             device_map="auto",
             torch_dtype=torch.bfloat16,
+            token=access_config.HF_TOKEN,
             trust_remote_code=True,
         )
 
         self.tokenizer = AutoTokenizer.from_pretrained(
             self.model_name,
             use_fast=True,
+            token=access_config.HF_TOKEN,
             trust_remote_code=True,
         )
         self.pipe = pipeline(

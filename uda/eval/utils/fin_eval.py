@@ -76,7 +76,7 @@ def get_metrics(
 
     def numbers_match(num1, num2, threshold=0.01):
         # give some threshold for float comparison due to the rounding error
-        return abs(num1 - num2) / ((num1 + num2) / 2 + 1e-9) < threshold
+        return abs(num1 - num2) / abs((num1 + num2) / 2 + 1e-9) < threshold
 
     if type(gold) == float or type(gold) == int:
         if type(predicted) == str:

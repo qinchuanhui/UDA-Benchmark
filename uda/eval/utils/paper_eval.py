@@ -66,12 +66,20 @@ def paper_evaluate(gold, predicted):
             max_answer_f1s.append(0.0)
             continue
         pred = predicted[question_id]["answer"]
-        for reference in gold[question_id]:
-            if reference[0].lower() in ["yes", "no"]:
+        for idx, reference in enumerate(references):
+            # The extended json file keeps the answer in a dict
+            if type(reference) == dict:
+                reference = reference["answer"]
+            # Align the predicted boolean answer with the reference
+            if reference.lower() in ["yes", "no"]:
                 if pred.lower().startswith("yes"):
                     pred = "Yes"
                 elif pred.lower().startswith("no"):
                     pred = "No"
+            references[idx] = reference
+        # Pad the references to 3
+        if len(references) <= 3:
+            references = references + [" "] * (3 - len(references))
         answer_f1s_and_types = [
             token_f1_score(pred, references[0]),
             token_f1_score(pred, references[1]),

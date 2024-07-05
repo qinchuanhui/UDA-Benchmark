@@ -2,6 +2,7 @@ from openai import AzureOpenAI
 import subprocess
 import os
 import time
+from uda.utils import access_config
 
 PROMPT_DICT = {
     "fin": {
@@ -104,16 +105,16 @@ def make_prompt_basic(question, context, task_name, llm_type="gpt4"):
     return messages
 
 
-def call_gpt(messages, api_key, endpoint, deployment_name):
+def call_gpt(messages):
     client = AzureOpenAI(
-        api_key=api_key,
+        api_key=access_config.GPT_API_KEY,
         api_version="2024-04-01-preview",
-        azure_endpoint=endpoint,
+        azure_endpoint=access_config.GPT_ENDPOINT,
     )
 
     try:
         response = client.chat.completions.create(
-            model=deployment_name,  # model = "deployment_name".
+            model=access_config.GPT_MODEL,
             messages=messages,
             temperature=0.1,
         )
