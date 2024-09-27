@@ -2,7 +2,7 @@
 
 # :page_with_curl: UDA-Benchmark
 
-A Benchmark Suite for Retrieval Augmented Generation in Real-world Document Analysis
+[NIPS2024] UDA: A Benchmark Suite for Retrieval Augmented Generation in Real-world Document Analysis 
 
 
 <a href="https://arxiv.org/abs/2406.15187" target="_blank"><img src=https://img.shields.io/badge/arXiv-2406.15187-b31b1b.svg></a> &nbsp;&nbsp;
