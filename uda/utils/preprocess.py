@@ -27,13 +27,13 @@ meta_data = {
         "bench_json_file": "dataset/extended_qa_info_bench/bench_paper_text_qa.json",
     },
     "feta": {
-        "example_pdf_dir": "dataset/src_doc_files_example/wiki_docs/pdfs",
-        "pdf_dir": "dataset/src_doc_files/wiki_docs/pdfs",
+        "example_pdf_dir": "dataset/src_doc_files_example/wiki_feta_docs/pdfs",
+        "pdf_dir": "dataset/src_doc_files/wiki_feta_docs/pdfs",
         "bench_json_file": "dataset/extended_qa_info_bench/bench_feta_qa.json",
     },
     "nq": {
-        "example_pdf_dir": "dataset/src_doc_files_example/wiki_docs/pdfs",
-        "pdf_dir": "dataset/src_doc_files/wiki_docs/pdfs",
+        "example_pdf_dir": "dataset/src_doc_files_example/wiki_nq_docs/pdfs",
+        "pdf_dir": "dataset/src_doc_files/wiki_nq_docs/pdfs",
         "bench_json_file": "dataset/extended_qa_info_bench/bench_nq_qa.json",
     },
 }

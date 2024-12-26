@@ -39,6 +39,24 @@ The demonstration encompasses several essential steps:
  * Generate the answering reponses with LLMs
  * Evaluate the accuracy of the reponses using the specific metric. 
 
+## :loudspeaker: Updates
+
+**Date: 12-26-2024**
+
+Fix the version issue of the Wikipedia pages, which are used in the FetaQA dataset.
+
+**Date: 09-28-2024**
+
+Our paper, "UDA: A Benchmark Suite for Retrieval Augmented Generation in Real-world Document Analysis", has been accepted by NeurIPS'24.
+
+**Date: 09-05-2024**
+
+Add more well-parsed annotated tables for the PaperTab dataset.
+
+
+
+
+
 ## :book: Dataset: UDA-QA 
 
 ### Description
@@ -117,5 +135,16 @@ Please kindly cite our paper if helps your research:
   author={Hui, Yulong and Lu, Yao and Zhang, Huanchen},
   journal={arXiv preprint arXiv:2406.15187},
   year={2024}
+}
+```
+or
+```BibTex
+@inproceedings{
+hui2024uda,
+title={{UDA}: A Benchmark Suite for Retrieval Augmented Generation in Real-World Document Analysis},
+author={Yulong Hui and Yao Lu and Huanchen Zhang},
+booktitle={The Thirty-eight Conference on Neural Information Processing Systems Datasets and Benchmarks Track},
+year={2024},
+url={https://openreview.net/forum?id=MS4oxVfBHn}
 }
 ```

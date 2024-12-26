@@ -4,4 +4,4 @@ wget https://huggingface.co/datasets/qinchuanhui/UDA-QA/resolve/main/src_doc_fil
 
 # wget https://huggingface.co/datasets/qinchuanhui/UDA-QA/resolve/main/src_doc_files/paper_docs.zip?download=true -O paper_docs.zip
 
-# wget https://huggingface.co/datasets/qinchuanhui/UDA-QA/resolve/main/src_doc_files/wiki_docs.zip?download=true -O wiki_docs.zip
+# wget https://huggingface.co/datasets/qinchuanhui/UDA-QA/resolve/main/src_doc_files/wiki_feta_docs.zip?download=true -O wiki_feta_docs.zip
