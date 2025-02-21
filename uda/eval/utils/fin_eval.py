@@ -145,11 +145,12 @@ class FinQAEm(object):
         CHARS_TO_REMOVE = "\"'.\n,"
         prediction = prediction.rstrip(CHARS_TO_REMOVE)
 
+        gold_answers = extract_gold_answers(response)
         if not prediction:
+            print("Warning: Empty prediction in FinQA.")
             exact_match = 0
-            f1_score = 0
+            f1_score = 0 
         else:
-            gold_answers = extract_gold_answers(response)
             gold_scale = ""
             pred_scale = ""  # no need to handle scale in prediction
             if not gold_answers:

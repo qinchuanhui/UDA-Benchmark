@@ -295,11 +295,12 @@ class TaTQAEmAndF1(object):
 
         answers = response["answers"]
         self.scale_total_count[answers["scale"]] += 1
+        gold_type, gold_answer, gold_scale = extract_gold_answers(answers)
         if not prediction:
+            print("Warning: Empty prediction in TATQA.")
             exact_match = 0
             f1_score = 0
         else:
-            gold_type, gold_answer, gold_scale = extract_gold_answers(answers)
             if IGNORE_SCALE:
                 gold_scale = ""
             pred_scale = ""  # no need to handle scale in prediction
